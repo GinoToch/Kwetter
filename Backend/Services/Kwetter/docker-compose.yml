@@ -1,0 +1,54 @@
+version: '3.4'
+
+services:
+  gateway.api:
+    image: ${DOCKER_REGISTRY-}gatewayapi
+    build:
+      context: .
+      dockerfile: Gateway.api/Dockerfile
+    ports:
+    - "5000:5000"
+    - "5001:5001"
+    networks:
+    - "proxybackend"
+
+  followers.api:
+    image: ${DOCKER_REGISTRY-}followersapi
+    build:
+      context: .
+      dockerfile: Followers.api/Dockerfile
+    ports:
+    - "5200:5200"
+    - "5201:5201"
+    networks:
+    - "proxybackend"
+
+
+  tweets.api:
+    image: ${DOCKER_REGISTRY-}tweetsapi
+    build:
+      context: .
+      dockerfile: Tweets.api/Dockerfile
+    ports:
+    - "5100:5100"
+    - "5101:5101"
+    networks:
+    - "proxybackend"
+
+  frontend:
+    image: ${DOCKER_REGISTRY-}frontend
+    stdin_open: true
+    tty: true
+    build:
+     context: ../../../frontend
+     dockerfile: Dockerfile
+    ports:
+    - "8080:8080"
+    networks:
+    - "proxybackend"
+
+
+networks:
+    proxybackend:
+     name: proxybackend
+     driver: bridge

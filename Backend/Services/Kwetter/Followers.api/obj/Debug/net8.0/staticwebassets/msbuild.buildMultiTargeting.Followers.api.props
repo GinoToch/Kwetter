@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Followers.api.props" />
+</Project>

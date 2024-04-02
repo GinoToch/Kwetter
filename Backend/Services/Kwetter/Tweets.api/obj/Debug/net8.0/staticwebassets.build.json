@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "G+Or/JoiRwsQX9j+s89K8xXLcGX4P7VKB5ZZF4fsaTU=",
+  "Source": "Tweets.api",
+  "BasePath": "_content/Tweets.api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
