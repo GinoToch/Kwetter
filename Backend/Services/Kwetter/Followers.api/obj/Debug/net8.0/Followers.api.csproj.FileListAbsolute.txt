@@ -30,3 +30,4 @@ G:\School\S6\Code\Backend\Services\Kwetter\Followers.api\obj\Debug\net8.0\refint
 G:\School\S6\Code\Backend\Services\Kwetter\Followers.api\obj\Debug\net8.0\Followers.api.pdb
 G:\School\S6\Code\Backend\Services\Kwetter\Followers.api\obj\Debug\net8.0\Followers.api.genruntimeconfig.cache
 G:\School\S6\Code\Backend\Services\Kwetter\Followers.api\obj\Debug\net8.0\ref\Followers.api.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Followers.api\obj\Debug\net8.0\Followers.api.sourcelink.json

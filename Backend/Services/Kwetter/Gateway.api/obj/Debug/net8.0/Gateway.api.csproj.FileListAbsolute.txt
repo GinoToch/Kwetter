@@ -33,3 +33,4 @@ G:\School\S6\Code\Backend\Services\Kwetter\Gateway.api\obj\Debug\net8.0\refint\G
 G:\School\S6\Code\Backend\Services\Kwetter\Gateway.api\obj\Debug\net8.0\Gateway.api.pdb
 G:\School\S6\Code\Backend\Services\Kwetter\Gateway.api\obj\Debug\net8.0\Gateway.api.genruntimeconfig.cache
 G:\School\S6\Code\Backend\Services\Kwetter\Gateway.api\obj\Debug\net8.0\ref\Gateway.api.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Gateway.api\obj\Debug\net8.0\Gateway.api.sourcelink.json

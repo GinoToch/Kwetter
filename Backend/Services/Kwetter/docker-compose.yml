@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Gateway.api/Dockerfile
     ports:
-    - "5000:5000"
+    - "5000:8080"
     - "5001:5001"
     networks:
     - "proxybackend"
@@ -18,7 +18,7 @@ services:
       context: .
       dockerfile: Followers.api/Dockerfile
     ports:
-    - "5200:5200"
+    - "5200:8080"
     - "5201:5201"
     networks:
     - "proxybackend"
@@ -30,22 +30,11 @@ services:
       context: .
       dockerfile: Tweets.api/Dockerfile
     ports:
-    - "5100:5100"
+    - "5100:8080"
     - "5101:5101"
     networks:
     - "proxybackend"
 
-  frontend:
-    image: ${DOCKER_REGISTRY-}frontend
-    stdin_open: true
-    tty: true
-    build:
-     context: ../../../frontend
-     dockerfile: Dockerfile
-    ports:
-    - "8080:8080"
-    networks:
-    - "proxybackend"
 
 
 networks:

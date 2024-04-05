@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2F1C800A-2F73-4E5D-8465-A139067CA8FF}|Followers.api\\Followers.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\followers.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F1C800A-2F73-4E5D-8465-A139067CA8FF}|Followers.api\\Followers.api.csproj|solutionrelative:followers.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\tweets.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|solutionrelative:tweets.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A99E31F7-1F99-4B1D-864A-7DD68FA565E0}|Gateway.api\\Gateway.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\gateway.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A99E31F7-1F99-4B1D-864A-7DD68FA565E0}|Gateway.api\\Gateway.api.csproj|solutionrelative:gateway.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D1271AD-6474-41C8-9ECF-8915D3D1D241}|docker-compose.dcproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{2D1271AD-6474-41C8-9ECF-8915D3D1D241}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A99E31F7-1F99-4B1D-864A-7DD68FA565E0}|Gateway.api\\Gateway.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\gateway.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A99E31F7-1F99-4B1D-864A-7DD68FA565E0}|Gateway.api\\Gateway.api.csproj|solutionrelative:gateway.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,40 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Followers.api\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Followers.api\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Followers.api\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Followers.api\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Program.cs",
+              "RelativeDocumentMoniker": "Tweets.api\\Program.cs",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Program.cs",
+              "RelativeToolTip": "Tweets.api\\Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB4AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T13:49:09.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "docker-compose.yml",
-              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\docker-compose.yml",
-              "RelativeDocumentMoniker": "docker-compose.yml",
-              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\docker-compose.yml",
-              "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2024-04-02T13:45:08.861Z",
+              "WhenOpened": "2024-04-05T13:36:28.381Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Gateway.api\\appsettings.json",
-              "RelativeDocumentMoniker": "Gateway.api\\appsettings.json",
-              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Gateway.api\\appsettings.json",
-              "RelativeToolTip": "Gateway.api\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-02T13:34:15.997Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Gateway.api\\Program.cs",
+              "RelativeDocumentMoniker": "Gateway.api\\Program.cs",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Gateway.api\\Program.cs",
+              "RelativeToolTip": "Gateway.api\\Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAcwBcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T13:35:53.699Z",
               "EditorCaption": ""
             }
           ]

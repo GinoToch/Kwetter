@@ -30,3 +30,4 @@ G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\obj\Debug\net8.0\refint\Tw
 G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\obj\Debug\net8.0\Tweets.api.pdb
 G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\obj\Debug\net8.0\Tweets.api.genruntimeconfig.cache
 G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\obj\Debug\net8.0\ref\Tweets.api.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\obj\Debug\net8.0\Tweets.api.sourcelink.json

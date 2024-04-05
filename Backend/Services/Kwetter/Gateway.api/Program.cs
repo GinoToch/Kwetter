@@ -1,5 +1,11 @@
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(o => o.AddPolicy("default", builder =>
+{
+    builder.AllowAnyOrigin()
+           .AllowAnyMethod()
+           .AllowAnyHeader();
+}));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -15,9 +21,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 
 app.MapReverseProxy();
+
+app.UseCors("default");
 
 app.Run();
