@@ -1,16 +1,18 @@
 import './App.css'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch, HashRouter } from "react-router-dom"
 import '@mantine/core/styles.css';
 import Homepage from './pages/Homepage';
+import Testpage from './pages/Testpage';
 
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Switch>
-        <Route path='/'><Homepage/></Route>
+        <Route exact path='/'><Homepage/></Route>
+        <Route exact path='/Test'><Testpage/></Route>
       </Switch>
-    </Router>
+    </HashRouter>
   )
 }
 
