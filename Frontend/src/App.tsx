@@ -11,6 +11,7 @@ function App() {
       <Switch>
         <Route exact path='/'><Homepage/></Route>
         <Route exact path='/Test'><Testpage/></Route>
+        <Router></Router>
       </Switch>
     </HashRouter>
   )
