@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Followers.api", "Followers.api\Followers.api.csproj", "{2F1C800A-2F73-4E5D-8465-A139067CA8FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Followers.api", "Followers.api\Followers.api.csproj", "{2F1C800A-2F73-4E5D-8465-A139067CA8FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tweets.api", "Tweets.api\Tweets.api.csproj", "{03E61238-45FE-408A-95B4-C0E41E4B48E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tweets.api", "Tweets.api\Tweets.api.csproj", "{03E61238-45FE-408A-95B4-C0E41E4B48E6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gateway", "gateway", "{2FA83BA4-C576-4930-B60E-34890D37B543}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway.api", "Gateway.api\Gateway.api.csproj", "{A99E31F7-1F99-4B1D-864A-7DD68FA565E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway.api", "Gateway.api\Gateway.api.csproj", "{A99E31F7-1F99-4B1D-864A-7DD68FA565E0}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2D1271AD-6474-41C8-9ECF-8915D3D1D241}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.api", "Users.api\Users.api.csproj", "{CA51E603-5857-441C-894C-6865677CEBAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifications.api", "Notifications.api\Notifications.api.csproj", "{693A9B6A-CC9B-472B-9263-6D957493DD84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,14 @@ Global
 		{2D1271AD-6474-41C8-9ECF-8915D3D1D241}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D1271AD-6474-41C8-9ECF-8915D3D1D241}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D1271AD-6474-41C8-9ECF-8915D3D1D241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA51E603-5857-441C-894C-6865677CEBAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA51E603-5857-441C-894C-6865677CEBAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA51E603-5857-441C-894C-6865677CEBAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA51E603-5857-441C-894C-6865677CEBAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{693A9B6A-CC9B-472B-9263-6D957493DD84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{693A9B6A-CC9B-472B-9263-6D957493DD84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{693A9B6A-CC9B-472B-9263-6D957493DD84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{693A9B6A-CC9B-472B-9263-6D957493DD84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

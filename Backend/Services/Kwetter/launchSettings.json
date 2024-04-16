@@ -6,7 +6,9 @@
       "serviceActions": {
         "gateway.api": "StartDebugging",
         "followers.api": "StartDebugging",
-        "tweets.api": "StartDebugging"
+        "tweets.api": "StartDebugging",
+        "users.api": "StartDebugging",
+        "notifications.api": "StartDebugging"
       }
     }
   }

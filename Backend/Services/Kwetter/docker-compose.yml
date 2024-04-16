@@ -23,7 +23,6 @@ services:
     networks:
     - "proxybackend"
 
-
   tweets.api:
     image: ${DOCKER_REGISTRY-}tweetsapi
     build:
@@ -35,9 +34,77 @@ services:
     networks:
     - "proxybackend"
 
+  users.api:
+      image: ${DOCKER_REGISTRY-}usersapi
+      build:
+         context: .
+         dockerfile: Users.api/Dockerfile
+      ports:
+      - "5300:8080"
+      - "5301:5301"
+      networks:
+      - "proxybackend"
 
+  notifications.api:
+    image: ${DOCKER_REGISTRY-}notificationsapi
+    build:
+      context: .
+      dockerfile: Notifications.api/Dockerfile
+    ports:
+      - "5400:8080"
+      - "5401:5401"
+    networks:
+    - "proxybackend"
+  
+  tweets.database:
+    image: mcr.microsoft.com/mssql/server:latest
+    container_name: tweets_database
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+      MSSQL_ENCRYPT: "0" 
+    ports:
+      - "1433:1433"
+    volumes:
+       - tweets_data:/var/opt/mssql
+    networks:
+    - "proxybackend"
 
+  users.database:
+    image: mcr.microsoft.com/mssql/server:latest
+    container_name: users_database
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1434:1433"
+    volumes:
+    - users_data:/var/opt/mssql
+    networks:
+    - "proxybackend"
+
+  followers.database:
+    image: mcr.microsoft.com/mssql/server:latest
+    container_name: followers_database
+    environment:
+      SA_PASSWORD: "YourStrong!Passw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1435:1433"
+    volumes:
+    - followers_data:/var/opt/mssql
+    networks:
+    - "proxybackend"
+
+volumes:
+  tweets_data:
+    driver: local
+  users_data:
+    driver: local
+  followers_data:
+    driver: local
+    
 networks:
-    proxybackend:
-     name: proxybackend
-     driver: bridge
+  proxybackend:
+    name: proxybackend
+    driver: bridge

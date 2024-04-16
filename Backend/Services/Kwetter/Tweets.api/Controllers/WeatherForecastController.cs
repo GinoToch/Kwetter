@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Tweets.api.Data;
+using Tweets.api.Entities;
 
 namespace Tweets.api.Controllers
 {
@@ -6,6 +8,8 @@ namespace Tweets.api.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
+        private readonly DataContext _dataContext;
+
         private static readonly string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
@@ -13,9 +17,11 @@ namespace Tweets.api.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, DataContext dataContext)
         {
             _logger = logger;
+            _dataContext = dataContext;
+
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -28,6 +34,21 @@ namespace Tweets.api.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpPost(Name = "PostSomething")]
+        public IActionResult Post()
+        {
+            Tweet tweet = new Tweet
+            {
+                Title = "lol",
+                Content = "new Content",
+                CreatedDate = DateTime.Now,
+                Id = 4
+            };
+            _dataContext.Tweets.Add(tweet);
+            _dataContext.SaveChanges();
+            return Ok(tweet);
         }
     }
 }
