@@ -43,8 +43,7 @@ namespace Tweets.api.Controllers
             {
                 Title = "lol",
                 Content = "new Content",
-                CreatedDate = DateTime.Now,
-                Id = 4
+                CreatedDate = DateTime.Now
             };
             _dataContext.Tweets.Add(tweet);
             _dataContext.SaveChanges();
