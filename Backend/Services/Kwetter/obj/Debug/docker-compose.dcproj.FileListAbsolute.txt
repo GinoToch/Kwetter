@@ -40,3 +40,11 @@ G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Notifications.api.dll
 G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Users.api.dll
 G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Notifications.api.pdb
 G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Users.api.pdb
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Microsoft.IdentityModel.Logging.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Microsoft.IdentityModel.Protocols.dll

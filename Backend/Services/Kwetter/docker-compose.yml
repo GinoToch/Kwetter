@@ -74,7 +74,7 @@ services:
     image: mcr.microsoft.com/mssql/server:latest
     container_name: users_database
     environment:
-      SA_PASSWORD: "UserDatabasePassw0rd!"
+      SA_PASSWORD: "UserDatabase!Passw0rd"
       ACCEPT_EULA: "Y"
       MSSQL_ENCRYPT: "0" 
     ports:

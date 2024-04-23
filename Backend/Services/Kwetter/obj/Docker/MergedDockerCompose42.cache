@@ -1,0 +1,267 @@
+name: dockercompose8924130373880136804
+services:
+  followers.api:
+    build:
+      context: G:\School\S6\Code\Backend\Services\Kwetter
+      dockerfile: Followers.api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+    image: followersapi
+    networks:
+      proxybackend: null
+    ports:
+    - mode: ingress
+      target: 5201
+      published: "5201"
+      protocol: tcp
+    - mode: ingress
+      target: 8080
+      protocol: tcp
+    - mode: ingress
+      target: 8080
+      published: "5200"
+      protocol: tcp
+    - mode: ingress
+      target: 8081
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\Stock\AppData\Roaming/Microsoft/UserSecrets
+      target: /home/app/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Stock\AppData\Roaming/ASP.NET/Https
+      target: /home/app/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+  followers.database:
+    container_name: followers_database
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: YourStrong!Passw0rd
+    image: mcr.microsoft.com/mssql/server:latest
+    networks:
+      proxybackend: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "1435"
+      protocol: tcp
+    volumes:
+    - type: volume
+      source: followers_data
+      target: /var/opt/mssql
+      volume: {}
+  gateway.api:
+    build:
+      context: G:\School\S6\Code\Backend\Services\Kwetter
+      dockerfile: Gateway.api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+    image: gatewayapi
+    networks:
+      proxybackend: null
+    ports:
+    - mode: ingress
+      target: 5001
+      published: "5001"
+      protocol: tcp
+    - mode: ingress
+      target: 8080
+      protocol: tcp
+    - mode: ingress
+      target: 8080
+      published: "5000"
+      protocol: tcp
+    - mode: ingress
+      target: 8081
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\Stock\AppData\Roaming/Microsoft/UserSecrets
+      target: /home/app/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Stock\AppData\Roaming/ASP.NET/Https
+      target: /home/app/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+  notifications.api:
+    build:
+      context: G:\School\S6\Code\Backend\Services\Kwetter
+      dockerfile: Notifications.api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+    image: notificationsapi
+    networks:
+      proxybackend: null
+    ports:
+    - mode: ingress
+      target: 5401
+      published: "5401"
+      protocol: tcp
+    - mode: ingress
+      target: 8080
+      protocol: tcp
+    - mode: ingress
+      target: 8080
+      published: "5400"
+      protocol: tcp
+    - mode: ingress
+      target: 8081
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\Stock\AppData\Roaming/Microsoft/UserSecrets
+      target: /home/app/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Stock\AppData\Roaming/ASP.NET/Https
+      target: /home/app/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+  tweets.api:
+    build:
+      context: G:\School\S6\Code\Backend\Services\Kwetter
+      dockerfile: Tweets.api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+    image: tweetsapi
+    networks:
+      proxybackend: null
+    ports:
+    - mode: ingress
+      target: 5101
+      published: "5101"
+      protocol: tcp
+    - mode: ingress
+      target: 8080
+      protocol: tcp
+    - mode: ingress
+      target: 8080
+      published: "5100"
+      protocol: tcp
+    - mode: ingress
+      target: 8081
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\Stock\AppData\Roaming/Microsoft/UserSecrets
+      target: /home/app/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Stock\AppData\Roaming/ASP.NET/Https
+      target: /home/app/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+  tweets.database:
+    container_name: tweets_database
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_ENCRYPT: "0"
+      SA_PASSWORD: YourStrong!Passw0rd
+    image: mcr.microsoft.com/mssql/server:latest
+    networks:
+      proxybackend: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "1433"
+      protocol: tcp
+    volumes:
+    - type: volume
+      source: tweets_data
+      target: /var/opt/mssql
+      volume: {}
+  users.api:
+    build:
+      context: G:\School\S6\Code\Backend\Services\Kwetter
+      dockerfile: Users.api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+    image: usersapi
+    networks:
+      proxybackend: null
+    ports:
+    - mode: ingress
+      target: 5301
+      published: "5301"
+      protocol: tcp
+    - mode: ingress
+      target: 8080
+      protocol: tcp
+    - mode: ingress
+      target: 8080
+      published: "5300"
+      protocol: tcp
+    - mode: ingress
+      target: 8081
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: C:\Users\Stock\AppData\Roaming/Microsoft/UserSecrets
+      target: /home/app/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\Stock\AppData\Roaming/ASP.NET/Https
+      target: /home/app/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+  users.database:
+    container_name: users_database
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_ENCRYPT: "0"
+      SA_PASSWORD: UserDatabase!Passw0rd
+    image: mcr.microsoft.com/mssql/server:latest
+    networks:
+      proxybackend: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "1434"
+      protocol: tcp
+    volumes:
+    - type: volume
+      source: users_data
+      target: /var/opt/mssql
+      volume: {}
+networks:
+  proxybackend:
+    name: proxybackend
+    driver: bridge
+volumes:
+  followers_data:
+    name: dockercompose8924130373880136804_followers_data
+    driver: local
+  tweets_data:
+    name: dockercompose8924130373880136804_tweets_data
+    driver: local
+  users_data:
+    name: dockercompose8924130373880136804_users_data
+    driver: local
