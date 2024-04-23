@@ -1,48 +1,69 @@
-import React, { useState } from "react";
-import { Button } from "@mantine/core";
+import { useState } from "react";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
 
-const Homepage: React.FC<{}> = ({}) => {
-  const [weatherData, setWeatherData] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [check, setCheck] = useState(false);
+  const history = useHistory(); // Initialize useHistory
 
-  const handleButtonClick = async () => {
-    setIsLoading(true);
-    setError(null);
+  const submitLogin = async (e:any) => {
+    e.preventDefault(); // Prevent the default form submission
 
     try {
-      const response = await fetch("http://localhost:5000/tweets-api/weatherforecast");
-      const data = await response.json();
-      setWeatherData(data);
-    } catch (error) {
-      setError("Error fetching weather data");
-    }
+      const response = await axios.post(
+        "http://localhost:5000/users-api/Authentication/login",
+        {
+          userName: username,
+          password: password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-    setIsLoading(false);
+      if (response.status === 200) {
+        sessionStorage.setItem("access-token", response.data.token);
+        console.log("Successful login");
+        history.push("/Test");
+      }
+    } catch (error) {
+      console.error("Login failed:", error);
+      setCheck(true);
+    }
   };
 
   return (
-    <>
-      <Button onClick={handleButtonClick} disabled={isLoading}>
-        {isLoading ? "Loading..." : "Call Api"}
-      </Button>
-      {error && <div>{error}</div>}
-      {weatherData.length > 0 && (
-        <div>
-          <h2>Weather Forecast:</h2>
-          <ul>
-            {weatherData.map((weather: any, index: number) => (
-              <li key={index}>
-                <strong>Date:</strong> {weather.date}<br />
-                <strong>Temperature:</strong> {weather.temperatureC}°C ({weather.temperatureF}°F)<br />
-                <strong>Summary:</strong> {weather.summary}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </>
+    <div className="container" id="main">
+      <img className="registerImg" src="../assets/LoginSVG.svg" alt="Login Image" />
+      <div className="signup">
+        <form onSubmit={submitLogin} className="loginForm">
+          <h1 className="HelloSlogan">Hello again!</h1>
+          <p>Log hier in met jouw account.</p>
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Name"
+          />
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+          />
+          {check && <div style={{ color: "red" }}>De ingevulde gegevens zijn niet juist.</div>}
+          <button type="submit" className="loginBtn">Login</button>
+        </form>
+        <button onClick={() => (window.location.href = "/")} className="loginBtn">
+          Terug naar Home
+        </button>
+      </div>
+    </div>
   );
-};
+}
 
-export default Homepage;
+export default Login;
