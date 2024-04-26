@@ -1,8 +1,12 @@
 global using Microsoft.EntityFrameworkCore;
 using Tweets.api.Data;
 using Tweets.api.Extensions;
+using Tweets.api.Interfaces;
+using Tweets.api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IFeedService, FeedService>();
 
 // Add services to the container.
 

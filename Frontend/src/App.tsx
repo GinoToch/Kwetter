@@ -2,7 +2,7 @@ import './App.css'
 import { BrowserRouter as Router, Route, Switch, HashRouter } from "react-router-dom"
 import '@mantine/core/styles.css';
 import Homepage from './pages/Homepage';
-import Testpage from './pages/Testpage';
+import Feedpage from './pages/Feedpage';
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <HashRouter>
       <Switch>
         <Route exact path='/'><Homepage/></Route>
-        <Route exact path='/Test'><Testpage/></Route>
+        <Route exact path='/feed'><Feedpage/></Route>
         <Router></Router>
       </Switch>
     </HashRouter>

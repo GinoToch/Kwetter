@@ -18,11 +18,6 @@ namespace Users.api.Controllers
             _dataContext = dataContext;
             _authenticationService = authenticationService;
         }
-        [HttpGet(Name = "GetSomething")]
-        public IActionResult GetSomething()
-        {
-            return Ok("dit werkt");
-        }
 
         [HttpPost("register")]
         public async Task<ActionResult<User>> UserRegister(UserAuthenticationDTO request)
@@ -34,7 +29,7 @@ namespace Users.api.Controllers
 
             bool hasCreatedIser = await _authenticationService.Register(user, request.Password);
 
-            if (hasCreatedIser) return Ok(user);
+            if (hasCreatedIser) return Ok(user.UserName);
             return Unauthorized(new { message = "User already in use" });
         }
 

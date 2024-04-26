@@ -3,20 +3,50 @@
   "WorkspaceRootPath": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\users.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|solutionrelative:users.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\tweets.api\\dto\\createtweetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|solutionrelative:tweets.api\\dto\\createtweetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\tweets.api\\interfaces\\ifeedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|solutionrelative:tweets.api\\interfaces\\ifeedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/localhost_1433/TweetsDatabase/SA/SqlTable/dbo.Tweets.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\tweets.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|solutionrelative:tweets.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\users.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|solutionrelative:users.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\users.api\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|solutionrelative:users.api\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\tweets.api\\controllers\\feedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|solutionrelative:tweets.api\\controllers\\feedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\tweets.api\\services\\feedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|solutionrelative:tweets.api\\services\\feedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\users.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|solutionrelative:users.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\users.api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|solutionrelative:users.api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\users.api\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|solutionrelative:users.api\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A99E31F7-1F99-4B1D-864A-7DD68FA565E0}|Gateway.api\\Gateway.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\gateway.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A99E31F7-1F99-4B1D-864A-7DD68FA565E0}|Gateway.api\\Gateway.api.csproj|solutionrelative:gateway.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/localhost_1434/UsersDatabase/sa/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\users.api\\dto\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +72,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,46 +84,133 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateTweetDTO.cs",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\DTO\\CreateTweetDTO.cs",
+              "RelativeDocumentMoniker": "Tweets.api\\DTO\\CreateTweetDTO.cs",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\DTO\\CreateTweetDTO.cs",
+              "RelativeToolTip": "Tweets.api\\DTO\\CreateTweetDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T10:30:33.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FeedService.cs",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Services\\FeedService.cs",
+              "RelativeDocumentMoniker": "Tweets.api\\Services\\FeedService.cs",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Services\\FeedService.cs",
+              "RelativeToolTip": "Tweets.api\\Services\\FeedService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T09:19:37.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Program.cs",
+              "RelativeDocumentMoniker": "Tweets.api\\Program.cs",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Program.cs",
+              "RelativeToolTip": "Tweets.api\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T09:16:48.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FeedController.cs",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Controllers\\FeedController.cs",
+              "RelativeDocumentMoniker": "Tweets.api\\Controllers\\FeedController.cs",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Controllers\\FeedController.cs",
+              "RelativeToolTip": "Tweets.api\\Controllers\\FeedController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAmwBIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T09:16:34.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.Tweets [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost_1433/TweetsDatabase/SA/SqlTable/dbo.Tweets.sql",
+              "ToolTip": "dbo.Tweets [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-26T09:08:52.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "IFeedService.cs",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Interfaces\\IFeedService.cs",
+              "RelativeDocumentMoniker": "Tweets.api\\Interfaces\\IFeedService.cs",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Interfaces\\IFeedService.cs",
+              "RelativeToolTip": "Tweets.api\\Interfaces\\IFeedService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T09:20:10.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Program.cs",
               "RelativeDocumentMoniker": "Users.api\\Program.cs",
               "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Program.cs",
               "RelativeToolTip": "Users.api\\Program.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACAAAAAEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T12:37:35.77Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "Users.api\\Controllers\\AuthenticationController.cs",
               "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Controllers\\AuthenticationController.cs",
               "RelativeToolTip": "Users.api\\Controllers\\AuthenticationController.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAuwCgAAAAIAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAowBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T12:12:01.604Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\appsettings.json",
               "RelativeDocumentMoniker": "Users.api\\appsettings.json",
               "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\appsettings.json",
               "RelativeToolTip": "Users.api\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-04-23T11:42:52.259Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Services\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "Users.api\\Services\\AuthenticationService.cs",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Services\\AuthenticationService.cs",
+              "RelativeToolTip": "Users.api\\Services\\AuthenticationService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAswC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T12:07:28.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "RegisterUserDTO.cs",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\DTO\\RegisterUserDTO.cs",
               "RelativeDocumentMoniker": "Users.api\\DTO\\RegisterUserDTO.cs",
@@ -101,25 +218,32 @@
               "RelativeToolTip": "Users.api\\DTO\\RegisterUserDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T12:21:37.853Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-23T12:21:37.853Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthenticationService.cs",
-              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Services\\AuthenticationService.cs",
-              "RelativeDocumentMoniker": "Users.api\\Services\\AuthenticationService.cs",
-              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Services\\AuthenticationService.cs",
-              "RelativeToolTip": "Users.api\\Services\\AuthenticationService.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAFgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T12:07:28.567Z",
-              "EditorCaption": ""
+              "DocumentIndex": 11,
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost_1434/UsersDatabase/sa/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-04-25T07:46:33.772Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Gateway.api\\appsettings.json",
+              "RelativeDocumentMoniker": "Gateway.api\\appsettings.json",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Gateway.api\\appsettings.json",
+              "RelativeToolTip": "Gateway.api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-25T07:59:14.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "User.cs",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Users.api\\Entities\\User.cs",
@@ -127,12 +251,11 @@
               "RelativeToolTip": "Users.api\\Entities\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T12:20:05.611Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-23T12:20:05.611Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "appsettings.json",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\appsettings.json",
               "RelativeDocumentMoniker": "Tweets.api\\appsettings.json",
@@ -140,12 +263,11 @@
               "RelativeToolTip": "Tweets.api\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-04-23T11:42:39.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-23T11:42:39.085Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
@@ -153,8 +275,7 @@
               "RelativeToolTip": "docker-compose.yml",
               "ViewState": "AQIAADUAAAAAAAAAAADwvzsAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2024-04-23T11:41:12.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-23T11:41:12.752Z"
             }
           ]
         },
