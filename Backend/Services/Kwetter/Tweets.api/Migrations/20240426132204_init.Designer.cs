@@ -12,7 +12,7 @@ using Tweets.api.Data;
 namespace Tweets.api.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240409120045_init")]
+    [Migration("20240426132204_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -27,11 +27,9 @@ namespace Tweets.api.Migrations
 
             modelBuilder.Entity("Tweets.api.Entities.Tweet", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Content")
                         .IsRequired()
@@ -40,7 +38,17 @@ namespace Tweets.api.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("Likes")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

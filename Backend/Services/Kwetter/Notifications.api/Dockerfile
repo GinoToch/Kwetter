@@ -1,23 +1,23 @@
 #See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER app
+#USER app
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
+#ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Notifications.api/Notifications.api.csproj", "Notifications.api/"]
-RUN dotnet restore "./Notifications.api/Notifications.api.csproj"
+COPY ["Notifications.api.csproj", "./"]
+RUN dotnet restore "Notifications.api.csproj"
 COPY . .
-WORKDIR "/src/Notifications.api"
-RUN dotnet build "./Notifications.api.csproj" -c $BUILD_CONFIGURATION -o /app/build
+#WORKDIR "/src/Notifications.api"
+RUN dotnet build  -c Release -o /app/build
 
 FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Notifications.api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+#ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "Notifications.api.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app

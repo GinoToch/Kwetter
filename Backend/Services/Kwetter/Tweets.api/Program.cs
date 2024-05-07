@@ -7,6 +7,7 @@ using Tweets.api.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IFeedService, FeedService>();
+builder.Services.AddScoped<ITweetService, TweetService>();
 
 // Add services to the container.
 
