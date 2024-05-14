@@ -27,7 +27,7 @@ jobs:
     - name: Build and push Docker image for User
       uses: docker/build-push-action@v2
       with:
-          context: . 
+          context: ./Backend
           push: true
           tags: GinoStock/userservice:latest
         
