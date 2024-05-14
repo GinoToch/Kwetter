@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  docker_login:
+  build-and-push:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -21,91 +21,16 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-  build-and-push-users-api:
-    runs-on: ubuntu-latest
-    needs: docker_login
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
       
-    - name: Build and push Docker image for Users API
+    - name: Build and push Docker image for User
       uses: docker/build-push-action@v2
       with:
           context: ./Backend/Services/Kwetter/Users.api
           push: true
           tags: ginotoch/userservice:latest
-
-  build-and-push-tweet-api:
-    runs-on: ubuntu-latest
-    needs: docker_login
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-      
-    - name: Build and push Docker image for Tweet API
-      uses: docker/build-push-action@v2
-      with:
-          context: ./Backend/Services/Kwetter/Tweets.api
-          push: true
-          tags: ginotoch/tweetapi:latest
-
-  build-and-push-followers-api:
-    runs-on: ubuntu-latest
-    needs: docker_login
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-      
-    - name: Build and push Docker image for Followers API
-      uses: docker/build-push-action@v2
-      with:
-          context: ./Backend/Services/Kwetter/Followers.api
-          push: true
-          tags: ginotoch/followersapi:latest
-
-  build-and-push-gateway-api:
-    runs-on: ubuntu-latest
-    needs: docker_login
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-      
-    - name: Build and push Docker image for Gateway API
-      uses: docker/build-push-action@v2
-      with:
-          context: ./Backend/Services/Kwetter/Gateway.api
-          push: true
-          tags: ginotoch/gatewayapi:latest
-
-  build-and-push-notifications-api:
-    runs-on: ubuntu-latest
-    needs: docker_login
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-      
-    - name: Build and push Docker image for Notifications API
-      uses: docker/build-push-action@v2
-      with:
-          context: ./Backend/Services/Kwetter/Notifications.api
-          push: true
-          tags: ginotoch/notificationsapi:latest
-
+        
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
