@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: usersapi
-        image: k3d-KwetterRegistry:5000/usersapi:v0.1
+        image: ginotoch/userservice
         ports:
         - containerPort: 8080
         resources:
@@ -75,7 +75,7 @@ spec:
     spec:
       containers:
       - name: tweetsapi
-        image: k3d-KwetterRegistry:5000/tweetsapi:v0.1
+        image: ginotoch/tweetservice
         ports:
         - containerPort: 8080
         resources:
@@ -133,7 +133,7 @@ spec:
     spec:
       containers:
       - name: gatewayapi
-        image: k3d-KwetterRegistry:5000/gatewayapi:v0.1
+        image: ginotoch/gateway
         ports:
         - containerPort: 8080
         resources:
@@ -191,7 +191,7 @@ spec:
     spec:
       containers:
       - name: followersapi
-        image: k3d-KwetterRegistry:5000/followersapi:v0.1
+        image: ginotoch/followerservice
         ports:
         - containerPort: 8080
         resources:
@@ -249,7 +249,7 @@ spec:
     spec:
       containers:
       - name: notificationsapi
-        image: k3d-KwetterRegistry:5000/notificationsapi:v0.1
+        image: ginotoch/notificationservice:latest
         ports:
         - containerPort: 8080
         resources:

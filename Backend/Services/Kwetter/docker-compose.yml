@@ -7,8 +7,8 @@ services:
       context: .
       dockerfile: Gateway.api/Dockerfile
     ports:
-    - "4000:8080"
-    - "4000:4001"
+    - "9000:8080"
+    - "9000:9001"
     networks:
     - "proxybackend"
 

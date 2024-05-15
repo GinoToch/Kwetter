@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\users.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|solutionrelative:users.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2D1271AD-6474-41C8-9ECF-8915D3D1D241}|docker-compose.dcproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{2D1271AD-6474-41C8-9ECF-8915D3D1D241}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\tweets.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|solutionrelative:tweets.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A99E31F7-1F99-4B1D-864A-7DD68FA565E0}|Gateway.api\\Gateway.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\gateway.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A99E31F7-1F99-4B1D-864A-7DD68FA565E0}|Gateway.api\\Gateway.api.csproj|solutionrelative:gateway.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +38,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
-              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\appsettings.json",
-              "RelativeDocumentMoniker": "Tweets.api\\appsettings.json",
-              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\appsettings.json",
-              "RelativeToolTip": "Tweets.api\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Gateway.api\\appsettings.json",
+              "RelativeDocumentMoniker": "Gateway.api\\appsettings.json",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Gateway.api\\appsettings.json",
+              "RelativeToolTip": "Gateway.api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-07T10:56:57.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T08:03:08.221Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
               "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\docker-compose.yml",
               "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAAAD0AAAAQAAAA",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAAcAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2024-05-07T10:08:46.523Z",
+              "WhenOpened": "2024-05-15T07:58:26.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\appsettings.json",
+              "RelativeDocumentMoniker": "Users.api\\appsettings.json",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\appsettings.json",
+              "RelativeToolTip": "Users.api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-15T07:46:48.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\appsettings.json",
+              "RelativeDocumentMoniker": "Tweets.api\\appsettings.json",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\appsettings.json",
+              "RelativeToolTip": "Tweets.api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-15T07:46:42.015Z",
               "EditorCaption": ""
             }
           ]
