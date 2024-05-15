@@ -1,7 +1,13 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Security.Cryptography;
+using System.Threading.Tasks;
 using Users.api.Data;
 using Users.api.Entities;
 using Users.api.Interfaces;
@@ -12,11 +18,13 @@ namespace Users.api.Services
     {
         private readonly DataContext _context;
         private readonly IConfiguration _configuration;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public AuthenticationService(DataContext dataContext, IConfiguration configuration)
+        public AuthenticationService(DataContext dataContext, IConfiguration configuration, IHttpContextAccessor httpContextAccessor)
         {
             _context = dataContext;
             _configuration = configuration;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<bool> Register(User user, string password)
@@ -41,8 +49,59 @@ namespace Users.api.Services
             if (user == null) return null;
 
             if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt)) return null;
-            
-            return CreateToken(user);
+
+            string accessToken = CreateAccessToken(user);
+            string refreshToken = CreateRefreshToken();
+
+            user.RefreshToken = refreshToken;
+            await _context.SaveChangesAsync();
+
+            SetRefreshTokenCookie(refreshToken);
+
+            return accessToken;
+        }
+
+        public async Task<string?> RefreshAccessToken(string refreshToken)
+        {
+            User? user = _context.Users.FirstOrDefault(x => x.RefreshToken == refreshToken);
+
+            if (user == null) return null;
+
+            string accessToken = CreateAccessToken(user);
+
+            return accessToken;
+        }
+
+        private string CreateAccessToken(User user)
+        {
+            List<Claim> claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Name, user.UserName),
+            };
+
+            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+            byte[] secret = System.Text.Encoding.UTF8.GetBytes(_configuration.GetSection("AppSettings:Token").Value);
+
+            SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.UtcNow.AddMinutes(15), // Access token expires in 15 minutes
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(secret), SecurityAlgorithms.HmacSha256Signature)
+            };
+
+            SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
+        }
+
+        private string CreateRefreshToken()
+        {
+            byte[] randomNumber = new byte[32];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(randomNumber);
+                return Convert.ToBase64String(randomNumber);
+            }
         }
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
@@ -63,29 +122,14 @@ namespace Users.api.Services
             }
         }
 
-        private string CreateToken(User user)
+        private void SetRefreshTokenCookie(string refreshToken)
         {
-
-            List<Claim> claims = new List<Claim>
+            var cookieOptions = new CookieOptions
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.UserName),
+                HttpOnly = true,
+                Expires = DateTime.UtcNow.AddHours(4), // Refresh token cookie expires in 4 hours
             };
-
-
-            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
-            byte[] secret = System.Text.Encoding.UTF8.GetBytes(_configuration.GetSection("AppSettings:Token").Value);
-
-            SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddDays(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(secret), SecurityAlgorithms.HmacSha256Signature)
-            };
-
-            SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
-
+            _httpContextAccessor.HttpContext.Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
         }
     }
 }
