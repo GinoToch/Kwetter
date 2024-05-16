@@ -9,18 +9,26 @@ import {
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { IconMoon, IconUser } from "@tabler/icons-react";
+import { jwtDecode } from "jwt-decode";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export function AppLayout() {
   const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
   const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(false);
-
+  const [username, setUsername] = useState<string>("");
   const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme("light", {
     getInitialValueInEffect: true,
   });
 
- 
+  useEffect(() => {
+    const token = sessionStorage.getItem("access-token");
+    if (token) {
+      const decodedToken: any = jwtDecode(token);
+      setUsername(decodedToken.unique_name);
+    }
+  }, [username]);
 
   return (
     <AppShell
@@ -100,7 +108,7 @@ export function AppLayout() {
               variant="transparent"
               
             >
-              Login
+              {username}
             </Button>
           </Group>
         </Group>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AppLayout from "../components/AppLayout";
+import { jwtDecode } from "jwt-decode";
 import {
   ActionIcon,
   Button,
@@ -17,21 +18,29 @@ import { IconHeart, IconMessage } from "@tabler/icons-react";
 const Feedpage: React.FC<{}> = () => {
   const [tweets, setTweets] = useState<any[]>([]);
   const [tweetContent, setTweetContent] = useState("");
-
+  const [username, setUsername] = useState<string>("");
+  
+  
   useEffect(() => {
+    const token = sessionStorage.getItem("access-token");
+    if (token) {
+      const decodedToken: any = jwtDecode(token);
+      setUsername(decodedToken.unique_name);
+    }
     const fetchData = async () => {
       try {
         const response = await axios.get(
           "http://localhost:9000/tweets-api/feed"
         );
         setTweets(response.data);
+        console.log(username)
         console.log(response.data);
       } catch (error) {
         console.error("Error fetching tweets:", error);
       }
     };
     fetchData();
-  }, []);
+  }, [username]);
 
   const handleTweetSubmit = async () => {
     if (!tweetContent) {
@@ -41,7 +50,7 @@ const Feedpage: React.FC<{}> = () => {
 
     const payload = {
       UserId: "f8443b2e-22fc-4a6a-b2c6-9d63c5aefc29",
-      UserName: "nieuweuser",
+      UserName: username,
       Title: "TesTitle",
       Content: tweetContent,
     };
