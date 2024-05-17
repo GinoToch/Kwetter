@@ -23,7 +23,7 @@ namespace Accounts.api.Services.Events
                 Description = "",
                 Followers = 0
             };
-            _dataContext.Users.Add(account);
+            _dataContext.Accounts.Add(account);
             await _dataContext.SaveChangesAsync();
         }
     }

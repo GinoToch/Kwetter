@@ -8,7 +8,7 @@ namespace Accounts.api.Data
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
-        public virtual DbSet<Account> Users { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
 
         protected DataContext() : base() { }
     }
