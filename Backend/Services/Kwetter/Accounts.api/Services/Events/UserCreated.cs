@@ -18,7 +18,7 @@ namespace Accounts.api.Services.Events
         {
             var account = new Account
             {
-                Id = Guid.NewGuid(),
+                Id = context.Message.id,
                 UserName = context.Message.UserName,
                 Description = "",
                 Followers = 0

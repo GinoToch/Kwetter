@@ -32,7 +32,7 @@ namespace Users.api.Services
             _publishEndpoint = publishEndpoint;
         }
 
-        public async Task<bool> Register(User user, string password)
+        public async Task<bool> Register(User user, string password, Guid id)
         {
             bool? isExistingUser = _context.Users.Any(x => x.UserName == user.UserName);
 
@@ -47,7 +47,8 @@ namespace Users.api.Services
 
             await _publishEndpoint.Publish(new UserCreatedEvent
             {
-                UserName = user.UserName,
+                id = id,
+                UserName = user.UserName
             });
 
             return true;

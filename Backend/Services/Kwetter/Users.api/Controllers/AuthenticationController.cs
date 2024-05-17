@@ -27,7 +27,7 @@ namespace Users.api.Controllers
             user.UserName = request.UserName;
             user.Id = Guid.NewGuid();
 
-            bool hasCreatedIser = await _authenticationService.Register(user, request.Password);
+            bool hasCreatedIser = await _authenticationService.Register(user, request.Password, user.Id);
 
             if (hasCreatedIser) return Ok(user.UserName);
             return Unauthorized(new { message = "User already in use" });
