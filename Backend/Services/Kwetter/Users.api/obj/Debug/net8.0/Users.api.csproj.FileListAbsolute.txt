@@ -136,3 +136,9 @@ G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\runtimes\w
 G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\MassTransit.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\MassTransit.Abstractions.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\RabbitMQ.Client.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\Contracts.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\Contracts.pdb

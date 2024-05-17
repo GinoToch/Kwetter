@@ -1,4 +1,7 @@
 global using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using Tweets.api.Data;
 using Tweets.api.Extensions;
 using Tweets.api.Interfaces;
@@ -8,6 +11,20 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<IFeedService, FeedService>();
 builder.Services.AddScoped<ITweetService, TweetService>();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8
+                .GetBytes(builder.Configuration.GetSection("AppSettings:Token").Value)),
+            ValidateIssuer = false,
+            ValidateAudience = false,
+            ClockSkew = TimeSpan.Zero
+        };
+    });
 
 // Add services to the container.
 

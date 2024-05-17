@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Contracts;
+using MassTransit;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -7,6 +9,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using Users.api.Data;
 using Users.api.Entities;
@@ -19,12 +22,14 @@ namespace Users.api.Services
         private readonly DataContext _context;
         private readonly IConfiguration _configuration;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IPublishEndpoint _publishEndpoint;
 
-        public AuthenticationService(DataContext dataContext, IConfiguration configuration, IHttpContextAccessor httpContextAccessor)
+        public AuthenticationService(DataContext dataContext, IConfiguration configuration, IHttpContextAccessor httpContextAccessor, IPublishEndpoint publishEndpoint)
         {
             _context = dataContext;
             _configuration = configuration;
             _httpContextAccessor = httpContextAccessor;
+            _publishEndpoint = publishEndpoint;
         }
 
         public async Task<bool> Register(User user, string password)
@@ -39,6 +44,12 @@ namespace Users.api.Services
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
+
+            await _publishEndpoint.Publish(new UserCreatedEvent
+            {
+                UserName = user.UserName,
+            });
+
             return true;
         }
 
@@ -61,38 +72,29 @@ namespace Users.api.Services
             return accessToken;
         }
 
-        public async Task<string?> RefreshAccessToken(string refreshToken)
-        {
-            User? user = _context.Users.FirstOrDefault(x => x.RefreshToken == refreshToken);
-
-            if (user == null) return null;
-
-            string accessToken = CreateAccessToken(user);
-
-            return accessToken;
-        }
-
         private string CreateAccessToken(User user)
         {
-            List<Claim> claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.UserName),
-            };
+            var claims = new List<Claim>
+    {
+        new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+        new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName),
+        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+    };
 
-            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
-            byte[] secret = System.Text.Encoding.UTF8.GetBytes(_configuration.GetSection("AppSettings:Token").Value);
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["AppSettings:Token"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.UtcNow.AddMinutes(15), // Access token expires in 15 minutes
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(secret), SecurityAlgorithms.HmacSha256Signature)
-            };
+            var token = new JwtSecurityToken(
+                issuer: _configuration["JwtIssuer"],
+                audience: _configuration["JwtAudience"],
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(2),
+                signingCredentials: creds
+            );
 
-            SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
 
         private string CreateRefreshToken()
         {
@@ -127,9 +129,26 @@ namespace Users.api.Services
             var cookieOptions = new CookieOptions
             {
                 HttpOnly = true,
-                Expires = DateTime.UtcNow.AddHours(4), // Refresh token cookie expires in 4 hours
+                Expires = DateTime.UtcNow.AddHours(4), 
             };
             _httpContextAccessor.HttpContext.Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
         }
+
+        public async Task<string?> RefreshAccessToken()
+        {
+            // Retrieve the user's identifier from the current HttpContext
+            var userId = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (userId == null) return null;
+
+            User? user = await _context.Users.FindAsync(Guid.Parse(userId));
+
+            if (user == null) return null; // Add a condition here if needed
+
+            string accessToken = CreateAccessToken(user);
+
+            return accessToken;
+        }
+
     }
 }

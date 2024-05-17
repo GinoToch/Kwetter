@@ -48,3 +48,14 @@ G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Microsoft.IdentityModel.Abs
 G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Accounts.api.deps.json
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Accounts.api.runtimeconfig.json
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Accounts.api.exe
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Accounts.api.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Accounts.api.pdb
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\MassTransit.RabbitMqTransport.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\MassTransit.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\MassTransit.Abstractions.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Contracts.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\RabbitMQ.Client.dll
+G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Contracts.pdb

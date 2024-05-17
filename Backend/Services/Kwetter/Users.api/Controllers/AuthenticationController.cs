@@ -43,5 +43,13 @@ namespace Users.api.Controllers
             return Ok(new { token = result });
         }
 
+        [HttpGet("refreshAccesstoken")]
+        public async Task<ActionResult<string>> RefreshAccessToken()
+        {
+            string? result = await _authenticationService.RefreshAccessToken();
+            if (result == null) return Unauthorized(new { message = "Unable to generate new Access token" });
+            return Ok(new { token = result });
+        }
+
     }
 }

@@ -37,7 +37,6 @@ namespace Users.api.Migrations
                         .HasColumnType("varbinary(max)");
 
                     b.Property<string>("RefreshToken")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")

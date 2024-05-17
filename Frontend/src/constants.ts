@@ -1,1 +1,1 @@
-export const baseURL = "http://localhost:5000/tweets-api/weatherforecast"
+export const BASE_URL = "http://localhost:9000";
