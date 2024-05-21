@@ -144,7 +144,7 @@ namespace Users.api.Services
 
             User? user = await _context.Users.FindAsync(Guid.Parse(userId));
 
-            if (user == null) return null; // Add a condition here if needed
+            if (user == null) return null;
 
             string accessToken = CreateAccessToken(user);
 

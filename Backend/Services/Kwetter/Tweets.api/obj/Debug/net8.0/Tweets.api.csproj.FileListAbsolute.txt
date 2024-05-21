@@ -136,3 +136,16 @@ G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\tr\Micros
 G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\Google.Protobuf.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\Grpc.Core.Api.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\Grpc.Net.Client.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\Grpc.Net.Common.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\OpenTelemetry.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\OpenTelemetry.Api.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\OpenTelemetry.Api.ProviderBuilderExtensions.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\OpenTelemetry.Exporter.OpenTelemetryProtocol.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\OpenTelemetry.Extensions.Hosting.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\OpenTelemetry.Instrumentation.AspNetCore.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\OpenTelemetry.Instrumentation.EntityFrameworkCore.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\OpenTelemetry.Instrumentation.Http.dll
