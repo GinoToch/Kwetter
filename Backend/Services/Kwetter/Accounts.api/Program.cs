@@ -5,9 +5,12 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using MassTransit;
 using Accounts.api.Services.Events;
+using Accounts.api.Interfaces;
+using Accounts.api.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

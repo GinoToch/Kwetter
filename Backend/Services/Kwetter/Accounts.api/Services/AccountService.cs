@@ -15,9 +15,10 @@ namespace Accounts.api.Services
             this.dataContext = dataContext;
         }
 
-        public ActionResult<Account> GetAccount(Guid id)
+        public ActionResult<Account> GetAccount(string name)
         {
-            return dataContext.Accounts.SingleOrDefault(x => x.Id == id);
+            var user = dataContext.Accounts.SingleOrDefault(x => x.UserName == name);            
+            return user; 
         }
     }
 }

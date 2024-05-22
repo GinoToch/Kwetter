@@ -3,23 +3,15 @@
   "WorkspaceRootPath": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/localhost_1436/AccountsDatabase/SA/SqlTable/dbo.Accounts.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\accounts.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|solutionrelative:accounts.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A99E31F7-1F99-4B1D-864A-7DD68FA565E0}|Gateway.api\\Gateway.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\gateway.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A99E31F7-1F99-4B1D-864A-7DD68FA565E0}|Gateway.api\\Gateway.api.csproj|solutionrelative:gateway.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\accounts.api\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|solutionrelative:accounts.api\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\accounts.api\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|solutionrelative:accounts.api\\interfaces\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/localhost_1436/AccountsDatabase/SA/SqlTable/dbo.Accounts.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,7 +21,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,64 +33,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Accounts.api\\Controllers\\AccountController.cs",
-              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Accounts.api\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBcAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T11:56:22.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Gateway.api\\appsettings.json",
-              "RelativeDocumentMoniker": "Gateway.api\\appsettings.json",
-              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Gateway.api\\appsettings.json",
-              "RelativeToolTip": "Gateway.api\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-21T12:04:06.214Z",
+              "Title": "dbo.Accounts [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost_1436/AccountsDatabase/SA/SqlTable/dbo.Accounts.sql",
+              "ToolTip": "dbo.Accounts [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-22T08:03:20.581Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "dbo.Accounts [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost_1436/AccountsDatabase/SA/SqlTable/dbo.Accounts.sql",
-              "ToolTip": "dbo.Accounts [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-21T11:59:02.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IAccountService.cs",
-              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Interfaces\\IAccountService.cs",
-              "RelativeDocumentMoniker": "Accounts.api\\Interfaces\\IAccountService.cs",
-              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Interfaces\\IAccountService.cs",
-              "RelativeToolTip": "Accounts.api\\Interfaces\\IAccountService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAFAAAA",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Accounts.api\\Controllers\\AccountController.cs",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Accounts.api\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBgAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T11:51:11.61Z",
+              "WhenOpened": "2024-05-22T08:02:16.131Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "AccountService.cs",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Services\\AccountService.cs",
               "RelativeDocumentMoniker": "Accounts.api\\Services\\AccountService.cs",
               "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Services\\AccountService.cs",
               "RelativeToolTip": "Accounts.api\\Services\\AccountService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAYwBQAAAAJAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBUAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T11:47:42.502Z",
+              "WhenOpened": "2024-05-22T08:02:11.966Z",
               "EditorCaption": ""
             }
           ]

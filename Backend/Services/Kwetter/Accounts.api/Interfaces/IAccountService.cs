@@ -5,6 +5,6 @@ namespace Accounts.api.Interfaces
 {
     public interface IAccountService
     {
-        ActionResult<Account> GetAccount(Guid id);
+        ActionResult<Account> GetAccount(string name);
     }
 }
