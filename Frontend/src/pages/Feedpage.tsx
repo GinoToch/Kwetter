@@ -15,6 +15,7 @@ import {
 } from "@mantine/core";
 import { IconHeart, IconMessage } from "@tabler/icons-react";
 import { BASE_URL } from "../constants";
+import { Link } from "react-router-dom";
 
 const Feedpage: React.FC<{}> = () => {
   const [tweets, setTweets] = useState<any[]>([]);
@@ -96,7 +97,10 @@ const Feedpage: React.FC<{}> = () => {
                 Created: {tweet.createdDate}
               </Text>
               <Text size="sm" c="gray">
-                from: {tweet.userName}
+                from:{" "}
+                <Link to={`/profile/${tweet.userId}`}>
+                  {tweet.userName}
+                </Link>
               </Text>
               <Grid columns={5}>
                 <Grid.Col span={0.5}>

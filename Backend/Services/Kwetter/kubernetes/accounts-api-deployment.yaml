@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\ProgramData\chocolatey\lib\kubernetes-kompose\tools\kompose.exe convert -f docker-compose.yml -o kubernetes/
+    kompose.version: 1.33.0 (3ce457399)
+  labels:
+    io.kompose.service: accounts-api
+  name: accounts-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: accounts-api
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: C:\ProgramData\chocolatey\lib\kubernetes-kompose\tools\kompose.exe convert -f docker-compose.yml -o kubernetes/
+        kompose.version: 1.33.0 (3ce457399)
+      labels:
+        io.kompose.network/proxybackend: "true"
+        io.kompose.service: accounts-api
+    spec:
+      containers:
+        - image: accountsapi
+          name: accounts-api
+          ports:
+            - containerPort: 8080
+              hostPort: 5500
+              protocol: TCP
+            - containerPort: 5501
+              hostPort: 5501
+              protocol: TCP
+      restartPolicy: Always

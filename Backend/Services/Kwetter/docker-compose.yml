@@ -31,6 +31,8 @@ services:
     ports:
     - "5100:8080"
     - "5101:5101"
+    environment:
+    - OTEL_EXPORTER_OTLP_ENDPOINT=http://tweetsapi.dashboard:18889
     networks:
     - "proxybackend"
 
@@ -136,6 +138,15 @@ services:
         - "5501:5501"
     networks:
     - "proxybackend"
+
+
+  tweetsapi.dashboard:
+        image: "mcr.microsoft.com/dotnet/nightly/aspire-dashboard:latest"
+        container_name: "tweet_dashboard"
+        ports:
+            - 18888:18888
+        networks:
+            - proxybackend
 
 volumes:
   tweets_data:

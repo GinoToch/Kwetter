@@ -28,7 +28,6 @@ export function Homepage(props:any) {
 
       if (response.status === 200) {
         sessionStorage.setItem("access-token", response.data.token);
-        console.log("Successful login");
         history.push("/Feed");
       }
     } catch (error) {
