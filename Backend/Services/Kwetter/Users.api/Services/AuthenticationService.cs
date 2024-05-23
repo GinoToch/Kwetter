@@ -1,4 +1,4 @@
-﻿using Contracts;
+﻿//using Contracts;
 using MassTransit;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
@@ -45,11 +45,11 @@ namespace Users.api.Services
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            await _publishEndpoint.Publish(new UserCreatedEvent
-            {
-                id = id,
-                UserName = user.UserName
-            });
+            //await _publishEndpoint.Publish(new UserCreatedEvent
+            //{
+            //    id = id,
+            //    UserName = user.UserName
+            //});
 
             return true;
         }
