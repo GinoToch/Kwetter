@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  .erlang.cookie: FQNOBJVLBYUWLDZJRFDS
+kind: ConfigMap
+metadata:
+  labels:
+    io.kompose.service: kwetter-mq
+  name: kwetter-mq-cm0
