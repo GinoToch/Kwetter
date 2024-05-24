@@ -33,6 +33,13 @@ namespace Users.api.Controllers
             return Unauthorized(new { message = "User already in use" });
         }
 
+        [HttpGet("GetSomething")]
+        public async Task<ActionResult<string>> Meh ()
+        {
+            return "Test Me";
+        }
+
+
         [HttpPost("login")]
         public async Task<ActionResult<string>> UserLogin(UserAuthenticationDTO request)
         {
