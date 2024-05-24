@@ -9,11 +9,12 @@ metadata:
   name: kwetter-mq
 spec:
   ports:
-    - name: "5672"
+    - name: amqp
       port: 5672
       targetPort: 5672
-    - name: "15672"
+    - name: management
       port: 15672
       targetPort: 15672
+  type: LoadBalancer
   selector:
     io.kompose.service: kwetter-mq

@@ -114,7 +114,7 @@ services:
 
   kwetter-mq:
     image: rabbitmq:management
-    container_name: Kwetter.RabbitMq
+    container_name: KwetterRabbitMq
     hostname: kwetter-mq
     ports:
     - "5672:5672"  

@@ -28,7 +28,7 @@ spec:
             - name: RABBITMQ_DEFAULT_USER
               value: guest
           image: rabbitmq:management
-          name: kwetter.rabbitmq
+          name: kwetterrabbitmq
           ports:
             - containerPort: 5672
               hostPort: 5672
