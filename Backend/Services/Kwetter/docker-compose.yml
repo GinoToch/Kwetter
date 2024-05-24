@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  gateway.api:
+  gatewayapi:
     image: ${DOCKER_REGISTRY-}gatewayapi
     build:
       context: .
@@ -12,7 +12,7 @@ services:
     networks:
     - "proxybackend"
 
-  followers.api:
+  followersapi:
     image: ${DOCKER_REGISTRY-}followersapi
     build:
       context: .
@@ -23,7 +23,7 @@ services:
     networks:
     - "proxybackend"
 
-  tweets.api:
+  tweetsapi:
     image: ${DOCKER_REGISTRY-}tweetsapi
     build:
       context: .
@@ -36,7 +36,7 @@ services:
     networks:
     - "proxybackend"
 
-  users.api:
+  usersapi:
       image: ${DOCKER_REGISTRY-}usersapi
       build:
          context: .
@@ -47,7 +47,7 @@ services:
       networks:
       - "proxybackend"
 
-  notifications.api:
+  notificationsapi:
     image: ${DOCKER_REGISTRY-}notificationsapi
     build:
       context: .
@@ -58,7 +58,7 @@ services:
     networks:
     - "proxybackend"
   
-  tweets.database:
+  tweetsdatabase:
     image: mcr.microsoft.com/mssql/server:latest
     container_name: tweets_database
     environment:
@@ -72,7 +72,7 @@ services:
     networks:
     - "proxybackend"
 
-  users.database:
+  usersdatabase:
     image: mcr.microsoft.com/mssql/server:latest
     container_name: users_database
     environment:
@@ -86,7 +86,7 @@ services:
     networks:
     - "proxybackend"
 
-  followers.database:
+  followersdatabase:
     image: mcr.microsoft.com/mssql/server:latest
     container_name: followers_database
     environment:
@@ -99,7 +99,7 @@ services:
     networks:
     - "proxybackend"
 
-  accounts.database:
+  accountsdatabase:
     image: mcr.microsoft.com/mssql/server:latest
     container_name: accounts_database
     environment:
@@ -119,16 +119,16 @@ services:
     ports:
     - "5672:5672"  
     - "15672:15672" 
-    volumes:
-    - ./.containers/queue/data/:/var/lib/rabbitmq
-    - ./.containers/queue/log/:/var/log/rabbitmq
+    # volumes:
+    # - ./.containers/queue/data/:/var/lib/rabbitmq
+    # - ./.containers/queue/log/:/var/log/rabbitmq
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
     networks:
       - proxybackend
 
-  accounts.api:
+  accountsapi:
     image: ${DOCKER_REGISTRY-}accountsapi
     build:
       context: .
@@ -140,7 +140,7 @@ services:
     - "proxybackend"
 
 
-  tweetsapi.dashboard:
+  tweetsapi-dashboard:
         image: "mcr.microsoft.com/dotnet/nightly/aspire-dashboard:latest"
         container_name: "tweet_dashboard"
         ports:

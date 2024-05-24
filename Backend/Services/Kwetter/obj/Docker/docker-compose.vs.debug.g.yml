@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  accounts.api:
+  accountsapi:
     image: accountsapi:dev
     container_name: "Accounts.api"
     build:
@@ -36,7 +36,7 @@ services:
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true
-  followers.api:
+  followersapi:
     image: followersapi:dev
     container_name: "Followers.api"
     build:
@@ -72,7 +72,7 @@ services:
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true
 
-  gateway.api:
+  gatewayapi:
     image: gatewayapi:dev
     container_name: "Gateway.api"
     build:
@@ -108,7 +108,7 @@ services:
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true
 
-  notifications.api:
+  notificationsapi:
     image: notificationsapi:dev
     container_name: "Notifications.api"
     build:
@@ -144,7 +144,7 @@ services:
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true
 
-  tweets.api:
+  tweetsapi:
     image: tweetsapi:dev
     container_name: "Tweets.api"
     build:
@@ -180,9 +180,9 @@ services:
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
     tty: true
 
-  users.api:
+  usersapi:
     image: usersapi:dev
-    container_name: "Users.api"
+    container_name: "Users.api_1"
     build:
       args:
         BUILD_CONFIGURATION: Debug

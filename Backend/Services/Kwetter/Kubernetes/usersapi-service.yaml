@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: C:\ProgramData\chocolatey\lib\kubernetes-kompose\tools\kompose.exe convert -f docker-compose.yml -o Kubernetes/
+    kompose.version: 1.33.0 (3ce457399)
+  labels:
+    io.kompose.service: usersapi
+  name: usersapi
+spec:
+  ports:
+    - name: "5300"
+      port: 5300
+      targetPort: 8080
+    - name: "5301"
+      port: 5301
+      targetPort: 5301
+  selector:
+    io.kompose.service: usersapi

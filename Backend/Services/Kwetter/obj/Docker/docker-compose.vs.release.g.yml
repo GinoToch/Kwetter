@@ -1,7 +1,7 @@
 version: '3.4'
 
 services:
-  accounts.api:
+  accountsapi:
     container_name: "Accounts.api"
     build:
       args:
@@ -27,7 +27,7 @@ services:
       com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
       com.microsoft.visual-studio.project-name: "Accounts.api"
     tty: true
-  followers.api:
+  followersapi:
     container_name: "Followers.api"
     build:
       args:
@@ -54,7 +54,7 @@ services:
       com.microsoft.visual-studio.project-name: "Followers.api"
     tty: true
 
-  gateway.api:
+  gatewayapi:
     container_name: "Gateway.api"
     build:
       args:
@@ -81,7 +81,7 @@ services:
       com.microsoft.visual-studio.project-name: "Gateway.api"
     tty: true
 
-  notifications.api:
+  notificationsapi:
     container_name: "Notifications.api"
     build:
       args:
@@ -108,7 +108,7 @@ services:
       com.microsoft.visual-studio.project-name: "Notifications.api"
     tty: true
 
-  tweets.api:
+  tweetsapi:
     container_name: "Tweets.api"
     build:
       args:
@@ -135,8 +135,8 @@ services:
       com.microsoft.visual-studio.project-name: "Tweets.api"
     tty: true
 
-  users.api:
-    container_name: "Users.api"
+  usersapi:
+    container_name: "Users.api_1"
     build:
       args:
         BUILD_CONFIGURATION: Release

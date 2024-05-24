@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\ProgramData\chocolatey\lib\kubernetes-kompose\tools\kompose.exe convert -f docker-compose.yml -o Kubernetes/
+    kompose.version: 1.33.0 (3ce457399)
+  labels:
+    io.kompose.service: kwetter-mq
+  name: kwetter-mq
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: kwetter-mq
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: C:\ProgramData\chocolatey\lib\kubernetes-kompose\tools\kompose.exe convert -f docker-compose.yml -o Kubernetes/
+        kompose.version: 1.33.0 (3ce457399)
+      labels:
+        io.kompose.network/proxybackend: "true"
+        io.kompose.service: kwetter-mq
+    spec:
+      containers:
+        - env:
+            - name: RABBITMQ_DEFAULT_PASS
+              value: guest
+            - name: RABBITMQ_DEFAULT_USER
+              value: guest
+          image: rabbitmq:management
+          name: kwetter.rabbitmq
+          ports:
+            - containerPort: 5672
+              hostPort: 5672
+              protocol: TCP
+            - containerPort: 15672
+              hostPort: 15672
+              protocol: TCP
+      hostname: kwetter-mq
+      restartPolicy: Always
