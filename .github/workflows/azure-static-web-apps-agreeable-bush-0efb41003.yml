@@ -28,7 +28,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: ./Backend/Services/Kwetter
-        file: Users.api/Dockerfile
+        file: ./Users.api/Dockerfile
         push: true
         tags: |
           ginotoch/userservice:latest
