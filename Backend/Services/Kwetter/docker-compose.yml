@@ -42,7 +42,7 @@ services:
          context: .
          dockerfile: Users.api/Dockerfile
       ports:
-      - "5300:8080"
+      - "5300:5300"
       - "5301:5301"
       networks:
       - "proxybackend"
