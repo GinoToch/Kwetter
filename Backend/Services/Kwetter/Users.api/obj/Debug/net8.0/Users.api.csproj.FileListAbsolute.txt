@@ -140,5 +140,3 @@ G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\MassTransi
 G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\MassTransit.Abstractions.dll
 G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
 G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\RabbitMQ.Client.dll
-G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\Contracts.dll
-G:\School\S6\Code\Backend\Services\Kwetter\Users.api\bin\Debug\net8.0\Contracts.pdb
