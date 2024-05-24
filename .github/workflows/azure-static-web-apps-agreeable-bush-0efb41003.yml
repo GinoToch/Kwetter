@@ -27,11 +27,13 @@ jobs:
     - name: Build and push Docker image for User
       uses: docker/build-push-action@v2
       with:
-        context: ./Backend/Services/Kwetter/Users.api
+        context: ./Backend/Services/Kwetter
+        file: Users.api/Dockerfile
         push: true
         tags: |
           ginotoch/userservice:latest
           ginotoch/userservice:${{ github.sha }}
+
 
     - name: Build and push Docker image for Tweet
       uses: docker/build-push-action@v2
