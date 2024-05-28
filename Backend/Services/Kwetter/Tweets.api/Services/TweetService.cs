@@ -32,9 +32,6 @@ namespace Tweets.api.Services
 
             _dataContext.Tweets.Add(request);
             await _dataContext.SaveChangesAsync();
-
-            DiagnosticsConfig.TweetsCounter.Add(1, new KeyValuePair<string, object?>("tweet", request));
-
             _logger.LogInformation("Successfully created tweet");
             return true;
         }
