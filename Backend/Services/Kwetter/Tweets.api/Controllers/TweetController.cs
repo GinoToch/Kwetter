@@ -18,7 +18,7 @@ namespace Tweets.api.Controllers
         }
 
         [HttpPost("CreateTweet")]
-        //[Authorize]
+        [Authorize]
         public async Task<ActionResult<Tweet>> CreateTweet(CreateTweetDTO request)
         {
             Tweet tweet = new Tweet();

@@ -22,10 +22,13 @@ spec:
         io.kompose.service: accountsapi
     spec:
       containers:
-        - image: accountsapi
+        - image: ginotoch/accountservice:latest
           name: accountsapi
           ports:
             - containerPort: 8080
               hostPort: 5500
               protocol: TCP
+          env:
+            - name: ConnectionStrings__Database
+              value: "Server=tcp:kwetterserver.database.windows.net,1433;Initial Catalog=accountdatabase;Persist Security Info=False;User ID=kwetteradmin;Password=adminkwetter!1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
       restartPolicy: Always
