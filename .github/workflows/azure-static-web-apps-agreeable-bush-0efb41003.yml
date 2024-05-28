@@ -72,14 +72,14 @@ jobs:
           ginotoch/notificationservice:${{ github.sha }}
 
     - name: Build and push Docker image for Accounts
-      uses: docker/build-push-action@v2
-      with:
-        context: ./Backend/Services/Kwetter/Accounts.api
-        file : ./Backend/Services/Kwetter/Accounts.api/Dockerfile
-        push: true
-        tags: |
-          ginotoch/accountservice:latest
-          ginotoch/accountservice:${{ github.sha }}
+      env:
+        DOCKER_BUILDKIT: 1
+      run: |
+        docker buildx build --no-cache --file ./Backend/Services/Kwetter/Accounts.api/Dockerfile \
+        --tag ginotoch/accountservice:latest --tag ginotoch/accountservice:${{ github.sha }} \
+        ./Backend/Services/Kwetter/Accounts.api
+        docker push ginotoch/accountservice:latest
+        docker push ginotoch/accountservice:${{ github.sha }}
 
         
   build_and_deploy_job:
