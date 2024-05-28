@@ -33,6 +33,7 @@ services:
     - "5101:5101"
     environment:
     - OTEL_EXPORTER_OTLP_ENDPOINT=http://tweetsapi-dashboard:18889
+    - ConnectionStrings__Database=Server=tweets_database,1433;Database=TweetsDatabase;User=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True
     networks:
     - "proxybackend"
 
