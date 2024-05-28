@@ -56,9 +56,7 @@ G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Accounts.api.pdb
 G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\MassTransit.RabbitMqTransport.dll
 G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\MassTransit.dll
 G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\MassTransit.Abstractions.dll
-G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Contracts.dll
 G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\RabbitMQ.Client.dll
-G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\Contracts.pdb
 G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\OpenTelemetry.dll
 G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\OpenTelemetry.Api.dll
 G:\School\S6\Code\Backend\Services\Kwetter\bin\Debug\OpenTelemetry.Extensions.Hosting.dll

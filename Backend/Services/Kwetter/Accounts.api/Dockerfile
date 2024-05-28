@@ -1,3 +1,5 @@
+#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
@@ -5,24 +7,17 @@ EXPOSE 8080
 EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+#ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-
-# Copy the project files
-COPY ["./Backend/Services/Kwetter/Accounts.api/Accounts.api.csproj", "Accounts.api/"]
-COPY ["./Backend/Services/Kwetter/Contracts/Contracts.csproj", "Contracts/"]
-
-# Restore dependencies
-RUN dotnet restore "Contracts/Contracts.csproj"
-RUN dotnet restore "Accounts.api/Accounts.api.csproj"
-
-# Copy the rest of the files
+COPY ["Accounts.api.csproj", "../Accounts.api"]
+RUN dotnet restore "Accounts.api.csproj"
 COPY . .
-
-# Build the application
-RUN dotnet build "Accounts.api/Accounts.api.csproj" -c Release -o /app/build
+#WORKDIR "/src/Accounts.api"
+RUN dotnet build  -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Accounts.api/Accounts.api.csproj" -c Release -o /app/publish /p:UseAppHost=false
+#ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "Accounts.api.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
