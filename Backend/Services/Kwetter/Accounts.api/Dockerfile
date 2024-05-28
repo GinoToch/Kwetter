@@ -9,7 +9,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 #ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Accounts.api.csproj", "../Accounts.api"]
+COPY ["Accounts.api.csproj", "./"]
 RUN dotnet restore "Accounts.api.csproj"
 COPY . .
 #WORKDIR "/src/Accounts.api"
