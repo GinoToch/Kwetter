@@ -76,8 +76,8 @@ jobs:
         context: ./Backend/Services/Kwetter/Accounts.api
         push: true
         tags: |
-          ginotoch/notificationservice:latest
-          ginotoch/notificationservice:${{ github.sha }}
+          ginotoch/accountservice:latest
+          ginotoch/accountservice:${{ github.sha }}
 
         
   build_and_deploy_job:
