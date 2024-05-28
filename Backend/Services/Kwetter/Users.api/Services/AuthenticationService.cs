@@ -1,7 +1,16 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Contracts;
+using MassTransit;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
 using Users.api.Data;
 using Users.api.Entities;
 using Users.api.Interfaces;
@@ -12,14 +21,18 @@ namespace Users.api.Services
     {
         private readonly DataContext _context;
         private readonly IConfiguration _configuration;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IPublishEndpoint _publishEndpoint;
 
-        public AuthenticationService(DataContext dataContext, IConfiguration configuration)
+        public AuthenticationService(DataContext dataContext, IConfiguration configuration, IHttpContextAccessor httpContextAccessor, IPublishEndpoint publishEndpoint)
         {
             _context = dataContext;
             _configuration = configuration;
+            _httpContextAccessor = httpContextAccessor;
+            _publishEndpoint = publishEndpoint;
         }
 
-        public async Task<bool> Register(User user, string password)
+        public async Task<bool> Register(User user, string password, Guid id)
         {
             bool? isExistingUser = _context.Users.Any(x => x.UserName == user.UserName);
 
@@ -31,6 +44,13 @@ namespace Users.api.Services
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
+
+            await _publishEndpoint.Publish(new UserCreatedEvent
+            {
+                id = id,
+                UserName = user.UserName
+            });
+
             return true;
         }
 
@@ -41,8 +61,50 @@ namespace Users.api.Services
             if (user == null) return null;
 
             if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt)) return null;
-            
-            return CreateToken(user);
+
+            string accessToken = CreateAccessToken(user);
+            string refreshToken = CreateRefreshToken();
+
+            user.RefreshToken = refreshToken;
+            await _context.SaveChangesAsync();
+
+            SetRefreshTokenCookie(refreshToken);
+
+            return accessToken;
+        }
+
+        private string CreateAccessToken(User user)
+        {
+            var claims = new List<Claim>
+    {
+        new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+        new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName),
+        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+    };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["AppSettings:Token"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: _configuration["JwtIssuer"],
+                audience: _configuration["JwtAudience"],
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(2),
+                signingCredentials: creds
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+
+        private string CreateRefreshToken()
+        {
+            byte[] randomNumber = new byte[32];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(randomNumber);
+                return Convert.ToBase64String(randomNumber);
+            }
         }
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
@@ -63,29 +125,31 @@ namespace Users.api.Services
             }
         }
 
-        private string CreateToken(User user)
+        private void SetRefreshTokenCookie(string refreshToken)
         {
-
-            List<Claim> claims = new List<Claim>
+            var cookieOptions = new CookieOptions
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.UserName),
+                HttpOnly = true,
+                Expires = DateTime.UtcNow.AddHours(4), 
             };
-
-
-            JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
-            byte[] secret = System.Text.Encoding.UTF8.GetBytes(_configuration.GetSection("AppSettings:Token").Value);
-
-            SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddDays(1),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(secret), SecurityAlgorithms.HmacSha256Signature)
-            };
-
-            SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
-
+            _httpContextAccessor.HttpContext.Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
         }
+
+        public async Task<string?> RefreshAccessToken()
+        {
+            // Retrieve the user's identifier from the current HttpContext
+            var userId = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (userId == null) return null;
+
+            User? user = await _context.Users.FindAsync(Guid.Parse(userId));
+
+            if (user == null) return null;
+
+            string accessToken = CreateAccessToken(user);
+
+            return accessToken;
+        }
+
     }
 }

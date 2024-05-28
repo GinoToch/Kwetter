@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Tweets.api.DTO;
 using Tweets.api.Entities;
 using Tweets.api.Interfaces;
@@ -17,6 +18,7 @@ namespace Tweets.api.Controllers
         }
 
         [HttpPost("CreateTweet")]
+        //[Authorize]
         public async Task<ActionResult<Tweet>> CreateTweet(CreateTweetDTO request)
         {
             Tweet tweet = new Tweet();

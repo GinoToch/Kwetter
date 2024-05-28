@@ -27,11 +27,18 @@ namespace Users.api.Controllers
             user.UserName = request.UserName;
             user.Id = Guid.NewGuid();
 
-            bool hasCreatedIser = await _authenticationService.Register(user, request.Password);
+            bool hasCreatedIser = await _authenticationService.Register(user, request.Password, user.Id);
 
             if (hasCreatedIser) return Ok(user.UserName);
             return Unauthorized(new { message = "User already in use" });
         }
+
+        [HttpGet("GetSomething")]
+        public async Task<ActionResult<string>> Meh ()
+        {
+            return "Test Me";
+        }
+
 
         [HttpPost("login")]
         public async Task<ActionResult<string>> UserLogin(UserAuthenticationDTO request)
@@ -40,6 +47,14 @@ namespace Users.api.Controllers
 
             if (result == null) return Unauthorized(new { message = "Unable to login." });
             
+            return Ok(new { token = result });
+        }
+
+        [HttpGet("refreshAccesstoken")]
+        public async Task<ActionResult<string>> RefreshAccessToken()
+        {
+            string? result = await _authenticationService.RefreshAccessToken();
+            if (result == null) return Unauthorized(new { message = "Unable to generate new Access token" });
             return Ok(new { token = result });
         }
 

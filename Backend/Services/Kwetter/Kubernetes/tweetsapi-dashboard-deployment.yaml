@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\ProgramData\chocolatey\lib\kubernetes-kompose\tools\kompose.exe convert -f docker-compose.yml -o Kubernetes/
+    kompose.version: 1.33.0 (3ce457399)
+  labels:
+    io.kompose.service: tweetsapi-dashboard
+  name: tweetsapi-dashboard
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: tweetsapi-dashboard
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: C:\ProgramData\chocolatey\lib\kubernetes-kompose\tools\kompose.exe convert -f docker-compose.yml -o Kubernetes/
+        kompose.version: 1.33.0 (3ce457399)
+      labels:
+        io.kompose.network/proxybackend: "true"
+        io.kompose.service: tweetsapi-dashboard
+    spec:
+      containers:
+        - image: mcr.microsoft.com/dotnet/nightly/aspire-dashboard:latest
+          name: tweet-dashboard
+          ports:
+            - containerPort: 18888
+              hostPort: 18888
+              protocol: TCP
+      restartPolicy: Always

@@ -4,11 +4,12 @@
       "commandName": "DockerCompose",
       "commandVersion": "1.0",
       "serviceActions": {
-        "gateway.api": "StartDebugging",
-        "followers.api": "StartDebugging",
-        "tweets.api": "StartDebugging",
-        "users.api": "StartDebugging",
-        "notifications.api": "StartDebugging"
+        "gatewayapi": "StartDebugging",
+        "followersapi": "StartDebugging",
+        "tweetsapi": "StartDebugging",
+        "usersapi": "StartDebugging",
+        "notificationsapi": "StartDebugging",
+        "accountsapi": "StartDebugging"
       }
     }
   }
