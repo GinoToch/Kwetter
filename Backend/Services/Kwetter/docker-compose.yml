@@ -37,15 +37,17 @@ services:
     - "proxybackend"
 
   usersapi:
-      image: ${DOCKER_REGISTRY-}usersapi
-      build:
-         context: .
-         dockerfile: Users.api/Dockerfile
-      ports:
-      - "5300:8080"
-      - "5301:5301"
-      networks:
-      - "proxybackend"
+    image: ${DOCKER_REGISTRY-}usersapi
+    build:
+      context: .
+      dockerfile: Users.api/Dockerfile
+    ports:
+    - "5300:8080"
+    - "5301:5301"
+    environment:
+    - ConnectionStrings__Database=Server=host.docker.internal,1434;Database=UsersDatabase;User Id=sa;Password=UserDatabase!Passw0rd;TrustServerCertificate=True
+    networks:
+    - "proxybackend"
 
   notificationsapi:
     image: ${DOCKER_REGISTRY-}notificationsapi
@@ -53,8 +55,8 @@ services:
       context: .
       dockerfile: Notifications.api/Dockerfile
     ports:
-      - "5400:8080"
-      - "5401:5401"
+    - "5400:8080"
+    - "5401:5401"
     networks:
     - "proxybackend"
   
@@ -64,11 +66,11 @@ services:
     environment:
       SA_PASSWORD: "YourStrong!Passw0rd"
       ACCEPT_EULA: "Y"
-      MSSQL_ENCRYPT: "0" 
+      MSSQL_ENCRYPT: "0"
     ports:
-      - "1433:1433"
+    - "1433:1433"
     volumes:
-       - tweets_data:/var/opt/mssql
+    - tweets_data:/var/opt/mssql
     networks:
     - "proxybackend"
 
@@ -78,9 +80,9 @@ services:
     environment:
       SA_PASSWORD: "UserDatabase!Passw0rd"
       ACCEPT_EULA: "Y"
-      MSSQL_ENCRYPT: "0" 
+      MSSQL_ENCRYPT: "0"
     ports:
-      - "1434:1433"
+    - "1434:1433"
     volumes:
     - users_data:/var/opt/mssql
     networks:
@@ -93,7 +95,7 @@ services:
       SA_PASSWORD: "YourStrong!Passw0rd"
       ACCEPT_EULA: "Y"
     ports:
-      - "1435:1433"
+    - "1435:1433"
     volumes:
     - followers_data:/var/opt/mssql
     networks:
@@ -106,7 +108,7 @@ services:
       SA_PASSWORD: "YourStrong!Passw0rdAccount"
       ACCEPT_EULA: "Y"
     ports:
-      - "1436:1433"
+    - "1436:1433"
     volumes:
     - accounts_data:/var/opt/mssql
     networks:
@@ -117,8 +119,8 @@ services:
     container_name: KwetterRabbitMq
     hostname: kwetter-mq
     ports:
-    - "5672:5672"  
-    - "15672:15672" 
+    - "5672:5672"
+    - "15672:15672"
     # volumes:
     # - ./.containers/queue/data/:/var/lib/rabbitmq
     # - ./.containers/queue/log/:/var/log/rabbitmq
@@ -126,7 +128,7 @@ services:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
     networks:
-      - proxybackend
+    - "proxybackend"
 
   accountsapi:
     image: ${DOCKER_REGISTRY-}accountsapi
@@ -134,19 +136,18 @@ services:
       context: .
       dockerfile: Accounts.api/Dockerfile
     ports: 
-        - "5500:8080"
-        - "5501:5501"
+    - "5500:8080"
+    - "5501:5501"
     networks:
     - "proxybackend"
 
-
   tweetsapi-dashboard:
-        image: "mcr.microsoft.com/dotnet/nightly/aspire-dashboard:latest"
-        container_name: "tweet_dashboard"
-        ports:
-            - 18888:18888
-        networks:
-            - proxybackend
+    image: "mcr.microsoft.com/dotnet/nightly/aspire-dashboard:latest"
+    container_name: "tweet_dashboard"
+    ports:
+    - 18888:18888
+    networks:
+    - proxybackend
 
 volumes:
   tweets_data:
@@ -158,9 +159,7 @@ volumes:
   accounts_data:
     driver: local
 
-    
 networks:
   proxybackend:
     name: proxybackend
     driver: bridge
-
