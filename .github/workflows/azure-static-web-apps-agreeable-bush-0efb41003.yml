@@ -71,7 +71,7 @@ jobs:
           ginotoch/notificationservice:latest
           ginotoch/notificationservice:${{ github.sha }}
 
-    - name: Build and push Docker image for Notification
+    - name: Build and push Docker image for Accounts
       uses: docker/build-push-action@v2
       with:
         context: ./Backend/Services/Kwetter/Accounts.api
