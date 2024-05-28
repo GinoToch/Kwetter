@@ -3,31 +3,28 @@
   "WorkspaceRootPath": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\accounts.api\\services\\events\\usercreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|solutionrelative:accounts.api\\services\\events\\usercreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2D1271AD-6474-41C8-9ECF-8915D3D1D241}|docker-compose.dcproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{2D1271AD-6474-41C8-9ECF-8915D3D1D241}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\accounts.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|solutionrelative:accounts.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\tweets.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|solutionrelative:tweets.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\accounts.api\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|solutionrelative:accounts.api\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2D1271AD-6474-41C8-9ECF-8915D3D1D241}|docker-compose.dcproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2D1271AD-6474-41C8-9ECF-8915D3D1D241}|docker-compose.dcproj|solutionrelative:docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/localhost_1436/AccountsDatabase/SA/SqlTable/dbo.Accounts.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\tweets.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|solutionrelative:tweets.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\tweets.api\\controllers\\tweetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03E61238-45FE-408A-95B4-C0E41E4B48E6}|Tweets.api\\Tweets.api.csproj|solutionrelative:tweets.api\\controllers\\tweetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\accounts.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|solutionrelative:accounts.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\accounts.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|solutionrelative:accounts.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,76 +47,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserCreated.cs",
-              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Services\\Events\\UserCreated.cs",
-              "RelativeDocumentMoniker": "Accounts.api\\Services\\Events\\UserCreated.cs",
-              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Services\\Events\\UserCreated.cs",
-              "RelativeToolTip": "Accounts.api\\Services\\Events\\UserCreated.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T11:09:24.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Services\\AccountService.cs",
-              "RelativeDocumentMoniker": "Accounts.api\\Services\\AccountService.cs",
-              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Services\\AccountService.cs",
-              "RelativeToolTip": "Accounts.api\\Services\\AccountService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T11:09:18.018Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "dbo.Accounts [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost_1436/AccountsDatabase/SA/SqlTable/dbo.Accounts.sql",
-              "ToolTip": "dbo.Accounts [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-28T10:47:34.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\appsettings.json",
-              "RelativeDocumentMoniker": "Accounts.api\\appsettings.json",
-              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\appsettings.json",
-              "RelativeToolTip": "Accounts.api\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-28T10:45:38.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
               "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\docker-compose.yml",
               "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AQIAAHgAAAAAAAAAAAAAAIgAAAApAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACMAAACWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2024-05-28T10:45:35.805Z",
+              "WhenOpened": "2024-05-28T13:19:48.643Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Program.cs",
-              "RelativeDocumentMoniker": "Accounts.api\\Program.cs",
-              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Program.cs",
-              "RelativeToolTip": "Accounts.api\\Program.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAADcAAABMAAAA",
+              "Title": "docker-compose",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\docker-compose.dcproj",
+              "RelativeDocumentMoniker": "docker-compose.dcproj",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\docker-compose.dcproj",
+              "RelativeToolTip": "docker-compose.dcproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-28T13:19:46.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\appsettings.json",
+              "RelativeDocumentMoniker": "Tweets.api\\appsettings.json",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\appsettings.json",
+              "RelativeToolTip": "Tweets.api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-28T13:19:37.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Tweets.api\\appsettings.Development.json",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\appsettings.Development.json",
+              "RelativeToolTip": "Tweets.api\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-28T13:18:46.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TweetController.cs",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Controllers\\TweetController.cs",
+              "RelativeDocumentMoniker": "Tweets.api\\Controllers\\TweetController.cs",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Controllers\\TweetController.cs",
+              "RelativeToolTip": "Tweets.api\\Controllers\\TweetController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwB4AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T11:09:32.625Z",
+              "WhenOpened": "2024-05-28T13:10:51.687Z",
               "EditorCaption": ""
             },
             {
@@ -130,9 +117,9 @@
               "RelativeDocumentMoniker": "Accounts.api\\appsettings.Development.json",
               "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\appsettings.Development.json",
               "RelativeToolTip": "Accounts.api\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA7AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-28T10:45:40.968Z",
+              "WhenOpened": "2024-05-28T13:02:36.568Z",
               "EditorCaption": ""
             }
           ]
