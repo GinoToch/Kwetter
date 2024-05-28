@@ -8,8 +8,8 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copy the project files
-COPY ["./Accounts.api/Accounts.api.csproj", "Accounts.api/"]
-COPY ["./Contracts/Contracts.csproj", "Contracts/"]
+COPY ["./Backend/Services/Kwetter/Accounts.api/Accounts.api.csproj", "Accounts.api/"]
+COPY ["./Backend/Services/Kwetter/Contracts/Contracts.csproj", "Contracts/"]
 
 # Restore dependencies
 RUN dotnet restore "Contracts/Contracts.csproj"

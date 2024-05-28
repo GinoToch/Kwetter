@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tweets.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb04a4c39b563317261fb13cb96eeea9b474380a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce7537c51c04e580c246f1d8fb00f6fcdca4c66e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tweets.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tweets.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

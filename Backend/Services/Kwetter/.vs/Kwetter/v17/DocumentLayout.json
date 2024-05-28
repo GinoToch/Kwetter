@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D1271AD-6474-41C8-9ECF-8915D3D1D241}|docker-compose.dcproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{2D1271AD-6474-41C8-9ECF-8915D3D1D241}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\users.api\\events\\usercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|solutionrelative:users.api\\events\\usercreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\accounts.api\\services\\events\\usercreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|solutionrelative:accounts.api\\services\\events\\usercreated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D1271AD-6474-41C8-9ECF-8915D3D1D241}|docker-compose.dcproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2D1271AD-6474-41C8-9ECF-8915D3D1D241}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AE96980-63E0-4116-BD64-F7837506C2B1}|Accounts.api\\Accounts.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\accounts.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,7 +41,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -49,7 +53,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "UserCreatedEvent.cs",
+              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Events\\UserCreatedEvent.cs",
+              "RelativeDocumentMoniker": "Users.api\\Events\\UserCreatedEvent.cs",
+              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Events\\UserCreatedEvent.cs",
+              "RelativeToolTip": "Users.api\\Events\\UserCreatedEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T11:41:10.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Program.cs",
               "RelativeDocumentMoniker": "Accounts.api\\Program.cs",
@@ -68,14 +85,14 @@
               "RelativeDocumentMoniker": "Accounts.api\\Services\\Events\\UserCreated.cs",
               "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Services\\Events\\UserCreated.cs",
               "RelativeToolTip": "Accounts.api\\Services\\Events\\UserCreated.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-28T11:09:24.81Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AccountService.cs",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\Services\\AccountService.cs",
               "RelativeDocumentMoniker": "Accounts.api\\Services\\AccountService.cs",
@@ -88,7 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "dbo.Accounts [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/localhost_1436/AccountsDatabase/SA/SqlTable/dbo.Accounts.sql",
               "ToolTip": "dbo.Accounts [Data]",
@@ -98,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\appsettings.json",
               "RelativeDocumentMoniker": "Accounts.api\\appsettings.json",
@@ -111,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
@@ -124,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Accounts.api\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Accounts.api\\appsettings.Development.json",
