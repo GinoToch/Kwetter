@@ -75,7 +75,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: ./Backend/Services/Kwetter/
-        dockerfile : ./Accounts.api
+        dockerfile : ./Accounts.api/Dockerfile
         push: true
         tags: |
           ginotoch/accountservice:latest
