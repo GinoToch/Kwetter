@@ -28,4 +28,7 @@ spec:
             - containerPort: 5300
               hostPort: 5300
               protocol: TCP
+          env:
+            - name: ConnectionStrings__Database
+              value: "Server=tcp:kwetterserver.database.windows.net,1433;Initial Catalog=userdatabase;Persist Security Info=False;User ID=kwetteradmin;Password=adminkwetter!1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
       restartPolicy: Always
