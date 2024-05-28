@@ -28,6 +28,11 @@ spec:
             - containerPort: 8080
               hostPort: 9000
               protocol: TCP
+          resources:
+            requests:
+              cpu: "250m"
+            limits:
+              cpu: "500m"
       restartPolicy: Always
       volumes:
         - name: config-volume

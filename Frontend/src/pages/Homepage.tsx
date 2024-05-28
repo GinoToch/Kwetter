@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Paper, Text, Divider, Anchor, Group, Button, TextInput, PasswordInput, Stack } from '@mantine/core';
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { BASE_URL } from "../constants";
 
 export function Homepage(props:any) {
   const [isLogin, setIsLogin] = useState(true);
@@ -14,7 +15,7 @@ export function Homepage(props:any) {
 
     try {
       const response = await axios.post(
-        "http://localhost:9000/users-api/Authentication/login",
+        (`${BASE_URL}/users-api/Authentication/login`),
         {
           userName: username,
           password: password,
@@ -28,7 +29,6 @@ export function Homepage(props:any) {
 
       if (response.status === 200) {
         sessionStorage.setItem("access-token", response.data.token);
-        console.log("Successful login");
         history.push("/Feed");
       }
     } catch (error) {
@@ -42,7 +42,7 @@ export function Homepage(props:any) {
 
     try {
       const response = await axios.post(
-        "http://localhost:9000/users-api/Authentication/register",
+        (`${BASE_URL}/users-api/Authentication/register`),
         {
           userName: username,
           password: password,
