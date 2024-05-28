@@ -138,6 +138,8 @@ services:
     ports: 
     - "5500:8080"
     - "5501:5501"
+    environment:
+    - ConnectionStrings__Database=Server=host.docker.internal,1436;Database=AccountsDatabase;User Id=sa;Password=YourStrong!Passw0rdAccount;TrustServerCertificate=True
     networks:
     - "proxybackend"
 

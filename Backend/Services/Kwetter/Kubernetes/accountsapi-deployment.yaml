@@ -28,7 +28,4 @@ spec:
             - containerPort: 8080
               hostPort: 5500
               protocol: TCP
-            - containerPort: 5501
-              hostPort: 5501
-              protocol: TCP
       restartPolicy: Always
