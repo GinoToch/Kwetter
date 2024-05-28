@@ -28,7 +28,7 @@ spec:
           image: ginotoch/tweetservice:latest
           name: tweetsapi
           ports:
-            - containerPort: 8080
+            - containerPort: 5300
               hostPort: 5100
               protocol: TCP
           env:
