@@ -25,13 +25,13 @@ spec:
         - env:
             - name: OTEL_EXPORTER_OTLP_ENDPOINT
               value: http://tweetsapi.dashboard:18889
-          image: tweetsapi
+          image: ginotoch/tweetservice:latest
           name: tweetsapi
           ports:
             - containerPort: 8080
               hostPort: 5100
               protocol: TCP
-            - containerPort: 5101
-              hostPort: 5101
-              protocol: TCP
+          env:
+            - name: ConnectionStrings__Database
+              value: "Server=tcp:kwetterserver.database.windows.net,1433;Initial Catalog=tweetdatabase;Persist Security Info=False;User ID=kwetteradmin;Password=adminkwetter!1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
       restartPolicy: Always
