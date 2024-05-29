@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Users.api.Data;
 using Users.api.DTO;
@@ -33,13 +34,6 @@ namespace Users.api.Controllers
             return Unauthorized(new { message = "User already in use" });
         }
 
-        [HttpGet("GetSomething")]
-        public async Task<ActionResult<string>> Meh ()
-        {
-            return "Test Me";
-        }
-
-
         [HttpPost("login")]
         public async Task<ActionResult<string>> UserLogin(UserAuthenticationDTO request)
         {
@@ -50,13 +44,23 @@ namespace Users.api.Controllers
             return Ok(new { token = result });
         }
 
-        [HttpGet("refreshAccesstoken")]
-        public async Task<ActionResult<string>> RefreshAccessToken()
+        [HttpPost("RefreshToken")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Refresh()
         {
-            string? result = await _authenticationService.RefreshAccessToken();
-            if (result == null) return Unauthorized(new { message = "Unable to generate new Access token" });
-            return Ok(new { token = result });
-        }
+            var refreshToken = Request.Cookies["refreshToken"];
+            if (string.IsNullOrEmpty(refreshToken))
+            {
+                return Unauthorized("Refresh token is missing.");
+            }
 
+            var newAccessToken = await _authenticationService.RefreshAccessToken(refreshToken);
+            if (newAccessToken == null)
+            {
+                return Unauthorized("Invalid refresh token.");
+            }
+
+            return Ok(new { AccessToken = newAccessToken });
+        }
     }
 }

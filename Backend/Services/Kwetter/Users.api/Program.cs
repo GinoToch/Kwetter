@@ -26,7 +26,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ClockSkew = TimeSpan.Zero
         };
     });
-
+//builder.Services.AddAuthorization(options =>
+//{
+//    options.AddPolicy("RefreshToken", policy =>
+//    {
+//        policy.RequireAssertion(context => true); // Allow anonymous access to the refresh token endpoint
+//    });
+//});
 
 builder.Services.AddCors(o => o.AddPolicy("default", builder =>
 {

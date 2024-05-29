@@ -6,6 +6,6 @@ namespace Users.api.Interfaces
     {
         Task<string?> Login(string username, string password);
         Task<bool> Register(User user, string password, Guid id);
-        Task<string?> RefreshAccessToken();
+        Task<string?> RefreshAccessToken(string refreshToken);
     }
 }
