@@ -26,13 +26,12 @@ spec:
           name: gatewayapi
           ports:
             - containerPort: 8080
-              hostPort: 9000
               protocol: TCP
           resources:
             requests:
-              cpu: "250m"
+              cpu: "100m"
             limits:
-              cpu: "500m"
+              cpu: "200m"
       restartPolicy: Always
       volumes:
         - name: config-volume

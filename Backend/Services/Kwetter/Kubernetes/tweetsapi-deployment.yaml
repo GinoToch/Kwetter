@@ -29,7 +29,6 @@ spec:
           name: tweetsapi
           ports:
             - containerPort: 5300
-              hostPort: 5100
               protocol: TCP
           env:
             - name: ConnectionStrings__Database

@@ -89,7 +89,7 @@ namespace Users.api.Services
                 issuer: _configuration["JwtIssuer"],
                 audience: _configuration["JwtAudience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(2),
+                expires: DateTime.UtcNow.AddMinutes(15),
                 signingCredentials: creds
             );
 
@@ -135,21 +135,20 @@ namespace Users.api.Services
             _httpContextAccessor.HttpContext.Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
         }
 
-        public async Task<string?> RefreshAccessToken()
+        public async Task<string?> RefreshAccessToken(string refreshToken)
         {
-            // Retrieve the user's identifier from the current HttpContext
-            var userId = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-
-            if (userId == null) return null;
-
-            User? user = await _context.Users.FindAsync(Guid.Parse(userId));
-
+            var user = _context.Users.FirstOrDefault(u => u.RefreshToken == refreshToken);
             if (user == null) return null;
 
-            string accessToken = CreateAccessToken(user);
+            var accessToken = CreateAccessToken(user);
+            var newRefreshToken = CreateRefreshToken();
+
+            user.RefreshToken = newRefreshToken;
+            await _context.SaveChangesAsync();
+
+            SetRefreshTokenCookie(newRefreshToken);
 
             return accessToken;
         }
-
     }
 }
