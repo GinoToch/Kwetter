@@ -16,7 +16,7 @@ namespace Accounts.api.Controllers
             _accountService = accountService;
         }
 
-        [HttpGet("{name}")]
+        [HttpGet("GetAccount")]
         public ActionResult<Account> GetAccount(string name)
         {
             var account = _accountService.GetAccount(name);
