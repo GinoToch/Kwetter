@@ -14,5 +14,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         
-      - name: Execute SAST
-        run: sh <(curl -s https://dl.betterscan.io/cli.sh)
+      - name: Download SAST script
+        run: curl -s -o betterscan.sh https://dl.betterscan.io/cli.sh
+        
+      - name: Execute SAST script
+        run: sh betterscan.sh
