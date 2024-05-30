@@ -26,7 +26,7 @@ jobs:
         run: |
           dotnet tool install --global dotnet-sonarscanner
           export PATH="$PATH:~/.dotnet/tools"
-          dotnet sonarscanner begin /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          dotnet sonarscanner begin /k:"ginotoch" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
 
       - name: Build the project
         run: dotnet build Backend/Services/Kwetter/Accounts.api/Accounts.api.csproj --no-incremental  # Update with the path to your .csproj file
