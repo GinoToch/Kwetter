@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: execute SAST
-      - run : sh <(curl https://dl.betterscan.io/cli.sh)
-    
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Execute SAST
+        run: sh <(curl -s https://dl.betterscan.io/cli.sh)
