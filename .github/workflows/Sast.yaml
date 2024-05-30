@@ -1,0 +1,17 @@
+name: Sast CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: execute SAST
+      - run : sh <(curl https://dl.betterscan.io/cli.sh)
+    
