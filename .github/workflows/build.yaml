@@ -20,7 +20,7 @@ jobs:
           dotnet-version: '8.x'  # Adjust this to your required .NET version
 
       - name: Restore dependencies
-        run: dotnet restore Kwetter/Backend/Services/Kwetter/Accounts.api/Accounts.api.csproj  # Update with the path to your .csproj file
+        run: dotnet restore Backend/Services/Kwetter/Accounts.api/Accounts.api.csproj  # Update with the path to your .csproj file
 
       - name: SonarQube Begin Analysis
         run: |
