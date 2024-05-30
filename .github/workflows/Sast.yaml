@@ -13,9 +13,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Download SAST script
         run: curl -s -o betterscan.sh https://dl.betterscan.io/cli.sh
-        
+
+      - name: Make SAST script executable
+        run: chmod +x betterscan.sh
+
       - name: Execute SAST script
-        run: sh betterscan.sh
+        run: ./betterscan.sh
