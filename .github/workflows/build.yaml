@@ -46,5 +46,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"GinoToch_Kwetter" /o:"ginotoch" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.csproj="Backend/Services/Kwetter/Accounts.api/Accounts.api.csproj"
-          dotnet build
+          dotnet build Backend/Services/Kwetter/Kwetter.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
