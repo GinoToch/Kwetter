@@ -1,24 +1,46 @@
-name: Sast CI
+---
+########################
+########################
+## SAST GitHub Action ##
+########################
+########################
+name: SAST
 
+#######################################
+# Start the job on all push to master #
+#######################################
 on:
   push:
-    branches: ["main"]
   pull_request:
-    branches: ["main"]
+    branches: ['main']
 
+###############
+# Set the Job #
+###############
 jobs:
   build:
+    # Name the Job
+    name: SAST
+
+    # Set the agent to run on
     runs-on: ubuntu-latest
 
+    ##################
+    # Load all steps #
+    ##################
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      ##########################
+      # Checkout the code base #
+      ##########################
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
-      - name: Download SAST script
-        run: curl -s -o betterscan.sh https://dl.betterscan.io/cli.sh
-
-      - name: Make SAST script executable
-        run: chmod +x betterscan.sh
-
-      - name: Execute SAST script
-        run: ./betterscan.sh
+      #####################
+      # Run Deploy script #
+      #####################
+      - name: Run SAST check
+        uses: IvanKuchin/SAST@v1
+        with:
+          GITHUB_TOKEN: ${{ github.token }}
+        env:
+          LOG_VERBOSE: true
