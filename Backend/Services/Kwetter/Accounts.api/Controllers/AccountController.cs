@@ -26,5 +26,15 @@ namespace Accounts.api.Controllers
             }
             return Ok(account);
         }
+        [HttpDelete("DeleteAccount")]
+        public ActionResult<Account> DeleteAccount(Guid id)
+        {
+            var account = _accountService.DeleteAccount(id);
+            if (account == null)
+            {
+                return NotFound();
+            }
+            return Ok("Successfully removed user");
+        }
     }
 }

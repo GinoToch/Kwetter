@@ -15,6 +15,18 @@ namespace Accounts.api.Services
             this.dataContext = dataContext;
         }
 
+        public ActionResult<Account> DeleteAccount(Guid id)
+        {
+            var user = dataContext.Accounts.FirstOrDefault(x => x.Id == id);
+            if (user != null)
+            {
+                dataContext.Accounts.Remove(user);
+                dataContext.SaveChangesAsync();
+            }
+            else { return null; }
+            return user;
+        }
+
         public ActionResult<Account> GetAccount(string name)
         {
             var user = dataContext.Accounts.SingleOrDefault(x => x.UserName == name);            
