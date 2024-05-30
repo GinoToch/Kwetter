@@ -98,7 +98,7 @@ const Feedpage: React.FC<{}> = () => {
               </Text>
               <Text size="sm" c="gray">
                 from:{" "}
-                <Link to={`/profile/${tweet.userId}`}>
+                <Link to={`/Account`}>
                   {tweet.userName}
                 </Link>
               </Text>
