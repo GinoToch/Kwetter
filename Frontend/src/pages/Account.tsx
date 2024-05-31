@@ -69,32 +69,7 @@ export function Account() {
   }
 
   const handleDeleteAccount = async () => {
-    // setDeleteModalOpened(true);
-    console.log("click")
-    const token = sessionStorage.getItem("access-token");
-    if (!token) {
-      console.error("Access token not found");
-      return;
-    }
-
-    const decodedToken: any = jwtDecode(token);
-    const userId = decodedToken.sub;
-
-    try {
-       await axios.delete(
-        `${BASE_URL}/account-api/account/DeleteAccount?id=${userId}`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
-      console.log("Account deleted successfully");
-      setDeleteModalOpened(false);
-    } catch (error) {
-      console.error("Error deleting account:", error);
-    }
+    setDeleteModalOpened(true);   
   };
 
   const handleConfirmDelete = async() => {
@@ -211,11 +186,12 @@ export function Account() {
           </Center>
           <Space h={"md"} />
           <Center>
-            <Button
+          <Button
               color="red"
               variant="outline"
+              onClick={handleConfirmDelete}
               rightSection={
-                <IconCheck size={14} onClick={handleConfirmDelete} />
+                <IconCheck size={14} />
               }
             >
               Yes

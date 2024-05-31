@@ -6,6 +6,7 @@ using System.Text;
 using Users.api.Data;
 using Users.api.Interfaces;
 using Users.api.Services;
+using Users.api.Services.Events;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,6 +48,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 builder.Services.AddMassTransit(busConfigurator =>
 {
     busConfigurator.SetKebabCaseEndpointNameFormatter();
+    busConfigurator.AddConsumer<UserDeletedConsumer>();
     busConfigurator.UsingRabbitMq((context, configurator) => {
         configurator.Host(new Uri(builder.Configuration["MessageBroker:Host"]!), h =>
         {
