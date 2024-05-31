@@ -26,6 +26,7 @@ namespace Accounts.api.Controllers
             }
             return Ok(account);
         }
+
         [HttpDelete("DeleteAccount")]
         public ActionResult<Account> DeleteAccount(Guid id)
         {

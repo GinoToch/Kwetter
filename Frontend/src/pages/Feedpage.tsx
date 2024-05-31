@@ -6,6 +6,7 @@ import {
   ActionIcon,
   Button,
   Card,
+  Center,
   Grid,
   Group,
   Input,
@@ -74,19 +75,26 @@ const Feedpage: React.FC<{}> = () => {
   return (
     <>
       <AppLayout />
+      
       <Space h={"4rem"} />
+      <Center>
       <Input
         placeholder="Enter message for tweet"
         value={tweetContent}
         onChange={(e) => setTweetContent(e.target.value)}
+        w={"11rem"}
       />
+      </Center>
       <Space h={"1rem"} />
+      <Center>
       <Button variant="outline" color={"orange"} onClick={handleTweetSubmit}>
         Post tweet
       </Button>
+      </Center>
       <Space h={"2rem"} />
+      <Center>
       {tweets.length > 0 ? (
-        <SimpleGrid>
+        <SimpleGrid maw={"40rem"} w={"20rem"}>
           {tweets.map((tweet) => (
             <Card key={tweet.id} shadow="sm" radius="xl" withBorder>
               <Group>
@@ -94,11 +102,11 @@ const Feedpage: React.FC<{}> = () => {
               </Group>
               <Space h={"1rem"} />
               <Text size="sm" c="gray">
-                Created: {tweet.createdDate}
+                Created: {new Date(tweet.createdDate).toLocaleString()}
               </Text>
               <Text size="sm" c="gray">
                 from:{" "}
-                <Link to={`/Account`}>
+                <Link to={`/Account/${tweet.userName}`}>
                   {tweet.userName}
                 </Link>
               </Text>
@@ -120,6 +128,7 @@ const Feedpage: React.FC<{}> = () => {
       ) : (
         <p>No tweets found.</p>
       )}
+      </Center>
     </>
   );
 };

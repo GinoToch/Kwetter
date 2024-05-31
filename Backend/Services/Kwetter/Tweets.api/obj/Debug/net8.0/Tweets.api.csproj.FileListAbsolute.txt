@@ -149,3 +149,7 @@ G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\OpenTelem
 G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\OpenTelemetry.Instrumentation.AspNetCore.dll
 G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\OpenTelemetry.Instrumentation.EntityFrameworkCore.dll
 G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\OpenTelemetry.Instrumentation.Http.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\MassTransit.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\MassTransit.Abstractions.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+G:\School\S6\Code\Backend\Services\Kwetter\Tweets.api\bin\Debug\net8.0\RabbitMQ.Client.dll

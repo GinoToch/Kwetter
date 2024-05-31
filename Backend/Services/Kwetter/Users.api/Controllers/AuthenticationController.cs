@@ -20,6 +20,7 @@ namespace Users.api.Controllers
             _authenticationService = authenticationService;
         }
 
+        [AllowAnonymous]
         [HttpPost("register")]
         public async Task<ActionResult<User>> UserRegister(UserAuthenticationDTO request)
         {
@@ -34,6 +35,7 @@ namespace Users.api.Controllers
             return Unauthorized(new { message = "User already in use" });
         }
 
+        [AllowAnonymous]
         [HttpPost("login")]
         public async Task<ActionResult<string>> UserLogin(UserAuthenticationDTO request)
         {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Paper, Text, Divider, Anchor, Group, Button, TextInput, PasswordInput, Stack } from '@mantine/core';
+import { Paper, Text, Divider, Anchor, Group, Button, TextInput, PasswordInput, Stack, Center, Space } from '@mantine/core';
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { BASE_URL } from "../constants";
@@ -67,7 +67,9 @@ export function Homepage(props:any) {
 
   return (
     <>
-      <Paper radius="md" p="xl" withBorder style={{ backgroundColor: isLogin ? "white" : "whitesmoke" }} {...props}>
+    <Space h={"2rem"}/>
+    <Center>
+      <Paper w={"20rem"} radius="md" p="xl" withBorder style={{ backgroundColor: isLogin ? "white" : "whitesmoke" }} {...props}>
         <Text size="lg" fw={500}>
           Welcome to Kwetter
         </Text>
@@ -105,6 +107,7 @@ export function Homepage(props:any) {
           </Group>
         </form>
       </Paper>
+      </Center>
     </>
   );
 }

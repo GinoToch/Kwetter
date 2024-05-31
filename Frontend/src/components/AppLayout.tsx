@@ -61,7 +61,7 @@ export function AppLayout() {
             />
             <Button
               component={Link}
-              to="/home"
+              to="/Feed"
               variant="transparent"
               
             >

@@ -7,6 +7,6 @@ namespace Accounts.api.Interfaces
     {
         ActionResult<Account> GetAccount(string name);
 
-        ActionResult<Account> DeleteAccount(Guid id);
+        Task<Account> DeleteAccount(Guid id);
     }
 }
