@@ -16,7 +16,7 @@ namespace Accounts.api.Controllers
             _accountService = accountService;
         }
 
-        [HttpGet("{name}")]
+        [HttpGet("GetAccount")]
         public ActionResult<Account> GetAccount(string name)
         {
             var account = _accountService.GetAccount(name);
@@ -25,6 +25,17 @@ namespace Accounts.api.Controllers
                 return NotFound();
             }
             return Ok(account);
+        }
+
+        [HttpDelete("DeleteAccount")]
+        public ActionResult<Account> DeleteAccount(Guid id)
+        {
+            var account = _accountService.DeleteAccount(id);
+            if (account == null)
+            {
+                return NotFound();
+            }
+            return Ok("Successfully removed user");
         }
     }
 }

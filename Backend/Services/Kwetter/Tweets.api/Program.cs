@@ -1,4 +1,5 @@
 global using Microsoft.EntityFrameworkCore;
+using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using OpenTelemetry.Logs;
@@ -11,6 +12,7 @@ using Tweets.api.Extensions;
 using Tweets.api.Interfaces;
 using Tweets.api.Monitoring;
 using Tweets.api.Services;
+using Tweets.api.Services.Events;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +36,23 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ClockSkew = TimeSpan.Zero
         };
     });
+
+builder.Services.AddMassTransit(busConfigurator =>
+{
+    busConfigurator.SetKebabCaseEndpointNameFormatter();
+
+    busConfigurator.AddConsumer<UserDeletedConsumer>();
+
+    busConfigurator.UsingRabbitMq((context, configurator) => {
+        configurator.Host(new Uri(builder.Configuration["MessageBroker:Host"]!), h =>
+        {
+            h.Username(builder.Configuration["MessageBroker:Username"]);
+            h.Password(builder.Configuration["MessageBroker:Password"]);
+        });
+
+        configurator.ConfigureEndpoints(context);
+    });
+});
 
 // Add services to the container.
 

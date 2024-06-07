@@ -61,7 +61,7 @@ export function AppLayout() {
             />
             <Button
               component={Link}
-              to="/home"
+              to="/Feed"
               variant="transparent"
               
             >
@@ -77,7 +77,7 @@ export function AppLayout() {
             </Button>
             <Button
               component={Link}
-              to="/flights"
+              to="/"
               key="checkIn"
               variant="transparent"
             >
@@ -114,16 +114,16 @@ export function AppLayout() {
         </Group>
       </AppShell.Header>
       <AppShell.Navbar p="md">
-      <Button key="flights" variant="transparent" >
+      <Button key="" variant="transparent" >
             Card
           </Button>
-          <Button key="flights" variant="transparent" >
+          <Button key="" variant="transparent" >
             Departure
           </Button>
-          <Button key="flights" variant="transparent" >
+          <Button key="" variant="transparent" >
             Date
           </Button>
-          <Button key="flights" variant="transparent" >
+          <Button key="" variant="transparent" >
             Time
           </Button></AppShell.Navbar>
     </AppShell>

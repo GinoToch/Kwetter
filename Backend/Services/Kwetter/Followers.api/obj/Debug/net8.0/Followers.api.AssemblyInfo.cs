@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Followers.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b1d9dcf8e593fd195533fbf1be82a2c46405ed6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06d392394533c6069732afb03320803da8cccc02")]
 [assembly: System.Reflection.AssemblyProductAttribute("Followers.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Followers.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

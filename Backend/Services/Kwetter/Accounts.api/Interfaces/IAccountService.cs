@@ -6,5 +6,7 @@ namespace Accounts.api.Interfaces
     public interface IAccountService
     {
         ActionResult<Account> GetAccount(string name);
+
+        Task<Account> DeleteAccount(Guid id);
     }
 }
