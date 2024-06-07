@@ -35,7 +35,7 @@ spec:
               value: "Server=tcp:kwetterserver.database.windows.net,1433;Initial Catalog=tweetdatabase;Persist Security Info=False;User ID=kwetteradmin;Password=adminkwetter!1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
           resources:
             requests:
-              cpu: "250m"
+              cpu: "100m"
             limits:
-              cpu: "500m"
+              cpu: "200m"
       restartPolicy: Always

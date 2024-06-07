@@ -3,12 +3,15 @@ import { Paper, Text, Divider, Anchor, Group, Button, TextInput, PasswordInput, 
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { BASE_URL } from "../constants";
+import { useDisclosure } from '@mantine/hooks';
+import { Modal } from '@mantine/core';
 
 export function Homepage(props:any) {
   const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
+  const [opened, { open, close }] = useDisclosure(false);
 
   const submitLogin = async (e:any) => {
     e.preventDefault();
@@ -108,6 +111,17 @@ export function Homepage(props:any) {
         </form>
       </Paper>
       </Center>
+      <Center>
+        <Space h={"4rem"}/>
+        <Button onClick={open}>Privacy policy</Button>
+      </Center>
+      <Modal opened={opened} onClose={close} withCloseButton={false}>
+        <Text size="xl">Privacy Policy</Text>
+        <Divider/>
+        <Text>Our application stores the messages created by the user. All user information, including the messages, is attached to their username
+          We ensure that user data is kept confidential and secure. By using our service, you agree to the storage and use of your information as described in this policy
+        </Text>
+      </Modal>
     </>
   );
 }
