@@ -80,7 +80,8 @@ export function Homepage(props: any) {
         title: "Registration Failed",
         message: "Unable to register. Please try again",
         color: "red",
-        icon: <IconX />
+        icon: <IconX />,
+        position: 'bottom-right'
       });
     }
   };

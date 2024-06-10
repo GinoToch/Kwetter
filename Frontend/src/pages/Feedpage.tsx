@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AppLayout from "../components/AppLayout";
 import {jwtDecode} from "jwt-decode";
@@ -113,7 +113,7 @@ const Feedpage: React.FC<{}> = () => {
       <Input
         placeholder="Enter message for tweet"
         value={tweetContent}
-        onChange={(e:any) => setTweetContent(e.target.value)}
+        onChange={(e) => setTweetContent(e.target.value)}
         w={"11rem"}
       />
       </Center>
