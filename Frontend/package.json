@@ -37,6 +37,7 @@
     "recharts": "^2.12.4"
   },
   "devDependencies": {
+    "@cucumber/cucumber": "^10.8.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@types/react-router-dom": "^5.3.3",
