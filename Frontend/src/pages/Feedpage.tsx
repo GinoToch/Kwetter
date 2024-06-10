@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AppLayout from "../components/AppLayout";
-import { jwtDecode } from "jwt-decode";
+import {jwtDecode} from "jwt-decode";
 import {
   ActionIcon,
   Button,
@@ -14,9 +14,10 @@ import {
   Space,
   Text,
 } from "@mantine/core";
-import { IconHeart, IconMessage } from "@tabler/icons-react";
+import { IconCheck, IconHeart, IconMessage, IconX } from "@tabler/icons-react";
 import { BASE_URL } from "../constants";
 import { Link } from "react-router-dom";
+import { showNotification } from '@mantine/notifications';
 
 const Feedpage: React.FC<{}> = () => {
   const [tweets, setTweets] = useState<any[]>([]);
@@ -39,6 +40,14 @@ const Feedpage: React.FC<{}> = () => {
         console.log(response.data);
       } catch (error) {
         console.error("Error fetching tweets:", error);
+        showNotification({
+          title: "Error",
+          message: "Failed to fetch tweets",
+          color: "red",
+          icon: <IconX />,
+          autoClose: 3000,
+          position: 'bottom-right',
+        });
       }
     };
     fetchData();
@@ -46,7 +55,14 @@ const Feedpage: React.FC<{}> = () => {
 
   const handleTweetSubmit = async () => {
     if (!tweetContent) {
-      // Handle empty tweet content (optional: display an error message)
+      showNotification({
+        title: "Error",
+        message: "Tweet content cannot be empty",
+        color: "red",
+        icon: <IconX />,
+        autoClose: 3000,
+        position: 'bottom-right',
+      });
       return;
     }
 
@@ -66,9 +82,25 @@ const Feedpage: React.FC<{}> = () => {
           },
         }
       );
+      showNotification({
+        title: "Success",
+        message: "Tweet posted successfully",
+        color: "green",
+        icon: <IconCheck />,
+        autoClose: 3000,
+        position: 'bottom-right',
+      });
+      setTweetContent(""); // Clear the input field after successful submission
     } catch (error) {
       console.error("Error creating tweet:", error);
-      // Handle creation error (optional: display an error message)
+      showNotification({
+        title: "Error",
+        message: "Failed to post tweet",
+        color: "red",
+        icon: <IconCheck />,
+        autoClose: 3000,
+        position: 'bottom-right',
+      });
     }
   };
 
