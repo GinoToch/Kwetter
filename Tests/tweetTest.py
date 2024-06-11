@@ -4,10 +4,10 @@ class CreateTweetTaskSet(TaskSet):
 
     @task
     def create_tweet(self):
-        url = "/tweets-api/tweet/CreateTweet"
+        url = "tweets-api/tweet/CreateTweet"
         headers = {
             "Content-Type": "application/json",
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMDZhNjRjNS0xMDM5LTRjNjQtOGEwMC0wOWJhMDIwYjc1ZjkiLCJ1bmlxdWVfbmFtZSI6Imphbm91IiwianRpIjoiYjQxZGY0MjYtYTkxMC00MmE3LTg2NGMtMWEzYzNlZWU0N2U0IiwiZXhwIjoxNzE3Nzc5MTUzfQ.WhU4YkFHS_bnNCUZxuphO8a6i5jfUWAmjRGG2PdouMk"
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MjNjOWFiNy04YTgwLTQ3NWQtYjliOS0yNzdmNmI4ZjdkMWQiLCJ1bmlxdWVfbmFtZSI6Imphbm91IiwianRpIjoiZmVlZDNiN2EtMzUxYi00MzRiLTgwZDEtNDU5ZWE5NWVjOGYxIiwiZXhwIjoxNzE4MTA0MDA4fQ.DE3R5S8TyS1zlxcRfpcmhSz8hR-LBevLkKMtC8UDyq4"
         }
         payload = {
             "UserId": "f8443b2e-22fc-4a6a-b2c6-9d63c5aefc29",
@@ -21,7 +21,7 @@ class CreateTweetTaskSet(TaskSet):
 class WebsiteUser(HttpUser):
     tasks = [CreateTweetTaskSet]
     wait_time = between(1, 5)
-    host = "http://172.211.231.227:9000"
+    host = "http://108.142.62.35:9000/"
 
 if __name__ == "__main__":
     import os
