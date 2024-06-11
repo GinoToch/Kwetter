@@ -106,7 +106,8 @@ export function AppLayout() {
             <Button
               leftSection={<IconUser size={14} />}
               variant="transparent"
-              
+              component={Link}
+              to={`/account/${username}`}
             >
               {username}
             </Button>

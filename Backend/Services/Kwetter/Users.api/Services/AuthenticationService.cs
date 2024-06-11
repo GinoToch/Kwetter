@@ -89,7 +89,7 @@ namespace Users.api.Services
                 issuer: _configuration["JwtIssuer"],
                 audience: _configuration["JwtAudience"],
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(2),
+                expires: DateTime.UtcNow.AddMinutes(15),
                 signingCredentials: creds
             );
 
