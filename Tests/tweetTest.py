@@ -7,7 +7,7 @@ class CreateTweetTaskSet(TaskSet):
         url = "tweets-api/tweet/CreateTweet"
         headers = {
             "Content-Type": "application/json",
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MjNjOWFiNy04YTgwLTQ3NWQtYjliOS0yNzdmNmI4ZjdkMWQiLCJ1bmlxdWVfbmFtZSI6Imphbm91IiwianRpIjoiZmVlZDNiN2EtMzUxYi00MzRiLTgwZDEtNDU5ZWE5NWVjOGYxIiwiZXhwIjoxNzE4MTA0MDA4fQ.DE3R5S8TyS1zlxcRfpcmhSz8hR-LBevLkKMtC8UDyq4"
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MjNjOWFiNy04YTgwLTQ3NWQtYjliOS0yNzdmNmI4ZjdkMWQiLCJ1bmlxdWVfbmFtZSI6Imphbm91IiwianRpIjoiZGRmMGViYjItN2EyZC00MGE2LTg3YjgtMjViMjhkMjJlZWM2IiwiZXhwIjoxNzE4MTA1NDM0fQ.TbgaQ5X53l6GPzcv04neSnVIzv07Oj9T0eOFJY__qeg"
         }
         payload = {
             "UserId": "f8443b2e-22fc-4a6a-b2c6-9d63c5aefc29",
