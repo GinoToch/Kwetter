@@ -28,12 +28,16 @@ describe('Homepage', () => {
   });
 
   it('should register a new user', () => {
+    // Generate random username and password
+    const randomUsername = `user_${Math.random().toString(36).substring(2, 10)}`;
+    const randomPassword = `pass_${Math.random().toString(36).substring(2, 10)}`;
+
     // Toggle to the register form
     cy.contains('Want to register?').click();
 
-    // Fill in register form with valid credentials
-    cy.get('input[placeholder="Your username"]').type('newUserrr');
-    cy.get('input[placeholder="Your password"]').type('newPassss');
+    // Fill in register form with random credentials
+    cy.get('input[placeholder="Your username"]').type(randomUsername);
+    cy.get('input[placeholder="Your password"]').type(randomPassword);
     cy.get('button[type="submit"]').contains('Register').click();
 
     // Check for the notification

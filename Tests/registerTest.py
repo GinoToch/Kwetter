@@ -1,5 +1,6 @@
+import random
+import string
 from locust import HttpUser, TaskSet, task, between
-import uuid
 
 class RegisterUserTaskSet(TaskSet):
 
@@ -10,10 +11,12 @@ class RegisterUserTaskSet(TaskSet):
             "Content-Type": "application/json"
         }
         
-        unique_id = str(uuid.uuid4())
+        username = ''.join(random.choices(string.ascii_lowercase + string.digits, k=10))  # Generates a random string of 10 lowercase letters and digits
+        password = ''.join(random.choices(string.ascii_letters + string.digits, k=12))  # Generates a random string of 12 letters and digits
+        
         payload = {
-            "UserName": f"user_{unique_id}",
-            "Password": f"pass_{unique_id}"
+            "UserName": username,
+            "Password": password
         }
 
         self.client.post(url, json=payload, headers=headers)
