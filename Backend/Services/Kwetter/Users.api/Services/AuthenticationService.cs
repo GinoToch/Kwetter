@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using Users.api.Data;
 using Users.api.Entities;
 using Users.api.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Users.api.Services
 {
@@ -34,15 +35,15 @@ namespace Users.api.Services
 
         public async Task<bool> Register(User user, string password, Guid id)
         {
-            bool? isExistingUser = _context.Users.Any(x => x.UserName == user.UserName);
+            bool isExistingUser = await _context.Users.AnyAsync(x => x.UserName == user.UserName);
 
-            if (isExistingUser == true) return false;
+            if (isExistingUser) return false;
 
             CreatePasswordHash(password, out byte[] hash, out byte[] salt);
             user.PasswordHash = hash;
             user.PasswordSalt = salt;
 
-            _context.Users.Add(user);
+            await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
 
             await _publishEndpoint.Publish(new UserCreatedEvent
@@ -56,7 +57,7 @@ namespace Users.api.Services
 
         public async Task<string?> Login(string username, string password)
         {
-            User? user = _context.Users.FirstOrDefault(x => x.UserName == username);
+            User? user = await _context.Users.FirstOrDefaultAsync(x => x.UserName == username);
 
             if (user == null) return null;
 
@@ -76,11 +77,11 @@ namespace Users.api.Services
         private string CreateAccessToken(User user)
         {
             var claims = new List<Claim>
-    {
-        new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-        new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName),
-        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-    };
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["AppSettings:Token"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -95,7 +96,6 @@ namespace Users.api.Services
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-
 
         private string CreateRefreshToken()
         {
@@ -130,14 +130,14 @@ namespace Users.api.Services
             var cookieOptions = new CookieOptions
             {
                 HttpOnly = true,
-                Expires = DateTime.UtcNow.AddHours(4), 
+                Expires = DateTime.UtcNow.AddHours(4),
             };
             _httpContextAccessor.HttpContext.Response.Cookies.Append("refreshToken", refreshToken, cookieOptions);
         }
 
         public async Task<string?> RefreshAccessToken(string refreshToken)
         {
-            var user = _context.Users.FirstOrDefault(u => u.RefreshToken == refreshToken);
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
             if (user == null) return null;
 
             var accessToken = CreateAccessToken(user);
