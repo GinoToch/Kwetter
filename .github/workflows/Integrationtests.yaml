@@ -32,8 +32,8 @@ jobs:
           dotnet build Kwetter.sln
 
       - name: Change directory to Backend/Services/Kwetter
-        run: cd Backend/Services/Kwetter
+        run: cd Backend/Services/Kwetter/KwetterIntegrationTestsUsers
 
       - name: Run integration tests
         run: |
-          dotnet test --no-build --configuration Release --verbosity normal
+          dotnet test KwetterIntegrationTestsUsers.csproj
