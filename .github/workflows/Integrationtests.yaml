@@ -27,7 +27,9 @@ jobs:
           dotnet restore Kwetter.sln
 
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: |
+          cd Backend/Services/Kwetter
+          dotnet build Kwetter.sln
 
       - name: Change directory to Backend/Services/Kwetter
         run: cd Backend/Services/Kwetter
