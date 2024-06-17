@@ -1,4 +1,4 @@
-name: CI
+name: Run integration tests
 
 on:
   push:
@@ -25,16 +25,16 @@ jobs:
       run: |
         cd Backend/Services/Kwetter  # Navigate to the directory containing Kwetter.sln
         dotnet restore Kwetter.sln
-      # Adjust the path to your solution file (Kwetter.sln) and navigate to its directory
+      # Adjust the path to your solution file (Kwetter.sln)
 
     - name: Build solution
       run: |
         cd Backend/Services/Kwetter  # Navigate to the directory containing Kwetter.sln
         dotnet build Kwetter.sln --no-restore
-      # Adjust the path to your solution file (Kwetter.sln) and navigate to its directory
+      # Adjust the path to your solution file (Kwetter.sln)
 
     - name: Run integration tests
       run: |
         cd Backend/Services/Kwetter  # Navigate to the directory containing Kwetter.sln
-        dotnet test Backend/Services/Kwetter/KwetterIntegrationTestsUsers --no-build --logger trx
-      # Adjust the path to your test project directory and navigate to its directory
+        dotnet test Backend/Services/Kwetter/KwetterIntegrationTestsUsers/KwetterIntegrationTestsUsers.csproj --no-build --logger trx
+      # Adjust the path to your test project file (KwetterIntegrationTestsUsers.csproj)
