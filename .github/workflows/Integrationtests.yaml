@@ -23,7 +23,7 @@ jobs:
 
       - name: Restore dependencies
         run: |
-          cd Backend/Services/Kwetter 
+          cd Backend/Services/Kwetter
           dotnet restore Kwetter.sln
 
       - name: Build
@@ -31,9 +31,8 @@ jobs:
           cd Backend/Services/Kwetter
           dotnet build Kwetter.sln
 
-      - name: Change directory to Backend/Services/Kwetter
+      - name: Change directory to integration tests
         run: cd Backend/Services/Kwetter/KwetterIntegrationTestsUsers
 
       - name: Run integration tests
-        run: |
-          dotnet test
+        run: dotnet test
