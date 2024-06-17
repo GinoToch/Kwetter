@@ -35,4 +35,5 @@ jobs:
         run: cd Backend/Services/Kwetter/KwetterIntegrationTestsUsers
 
       - name: Run integration tests
-        run: dotnet test
+        run: |
+          dotnet test KwetterIntegrationTestsUsers.csproj
