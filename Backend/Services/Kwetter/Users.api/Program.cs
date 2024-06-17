@@ -79,3 +79,4 @@ app.UseCors("default");
 app.MapControllers();
 
 app.Run();
+public partial class Program { }

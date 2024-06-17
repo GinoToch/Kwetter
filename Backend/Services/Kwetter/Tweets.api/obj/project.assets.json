@@ -5369,24 +5369,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Stock\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Stock\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Tweets.api.csproj",
+      "projectUniqueName": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\Tweets.api\\Tweets.api.csproj",
       "projectName": "Tweets.api",
-      "projectPath": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\Tweets.api.csproj",
+      "projectPath": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\Tweets.api\\Tweets.api.csproj",
       "packagesPath": "C:\\Users\\Stock\\.nuget\\packages\\",
-      "outputPath": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Tweets.api\\obj\\",
+      "outputPath": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\Tweets.api\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\Stock\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5407,11 +5402,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -5488,7 +5478,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

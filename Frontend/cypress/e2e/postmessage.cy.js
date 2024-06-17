@@ -15,10 +15,5 @@ describe('postmessage', () => {
       // Check for the notification
       cy.get('.mantine-Notification-root').should('contain', 'Tweet posted successfully');
     });
-  
-    // it('should display tweets', () => {
-    //   // Check that tweets are displayed
-    //   cy.get('.mantine-Card-root').should('contain', 'This is a test tweet');
-    // });
   });
   
