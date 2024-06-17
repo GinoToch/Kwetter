@@ -22,7 +22,9 @@ jobs:
           dotnet-version: '8.x'  # Adjust to '6.x' if using .NET 6
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: |
+          cd Backend/Services/Kwetter 
+          dotnet restore Kwetter.sln
 
       - name: Build
         run: dotnet build --configuration Release --no-restore
