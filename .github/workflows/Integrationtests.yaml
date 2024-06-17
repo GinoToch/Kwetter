@@ -1,4 +1,4 @@
-name: CI
+name: Run integration tests
 
 on:
   push:
@@ -22,10 +22,16 @@ jobs:
         dotnet-version: '8.0.x'  # Specify .NET 8
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore Backend/Services/Kwetter/Kwetter.sln
+      working-directory: Backend/Services/Kwetter
+      # Adjust the path to your solution file and set the working directory accordingly
 
     - name: Build solution
-      run: dotnet build --no-restore
+      run: dotnet build Backend/Services/Kwetter/Kwetter.sln --no-restore
+      working-directory: Backend/Services/Kwetter
+      # Adjust the path to your solution file and set the working directory accordingly
 
     - name: Run integration tests
       run: dotnet test Backend/Services/Kwetter/KwetterIntegrationTestsUsers --no-build --logger trx
+      working-directory: Backend/Services/Kwetter
+      # Adjust the path to your test project directory and set the working directory accordingly
