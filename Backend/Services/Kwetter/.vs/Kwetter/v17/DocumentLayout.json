@@ -1,10 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\",
+  "WorkspaceRootPath": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|g:\\school\\s6\\code\\backend\\services\\kwetter\\users.api\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA51E603-5857-441C-894C-6865677CEBAA}|Users.api\\Users.api.csproj|solutionrelative:users.api\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DEC8043-4F39-41AA-8AF6-93E75EBAC64D}|KwetterIntegrationtestsTweets\\KwetterIntegrationtestsTweets.csproj|d:\\school\\s6\\code\\kwetter\\backend\\services\\kwetter\\kwetterintegrationteststweets\\dummytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DEC8043-4F39-41AA-8AF6-93E75EBAC64D}|KwetterIntegrationtestsTweets\\KwetterIntegrationtestsTweets.csproj|solutionrelative:kwetterintegrationteststweets\\dummytest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DEC8043-4F39-41AA-8AF6-93E75EBAC64D}|KwetterIntegrationtestsTweets\\KwetterIntegrationtestsTweets.csproj|d:\\school\\s6\\code\\kwetter\\backend\\services\\kwetter\\kwetterintegrationteststweets\\authenticationcontrollerintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DEC8043-4F39-41AA-8AF6-93E75EBAC64D}|KwetterIntegrationtestsTweets\\KwetterIntegrationtestsTweets.csproj|solutionrelative:kwetterintegrationteststweets\\authenticationcontrollerintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DEC8043-4F39-41AA-8AF6-93E75EBAC64D}|KwetterIntegrationtestsTweets\\KwetterIntegrationtestsTweets.csproj|d:\\school\\s6\\code\\kwetter\\backend\\services\\kwetter\\kwetterintegrationteststweets\\setup\\integrationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DEC8043-4F39-41AA-8AF6-93E75EBAC64D}|KwetterIntegrationtestsTweets\\KwetterIntegrationtestsTweets.csproj|solutionrelative:kwetterintegrationteststweets\\setup\\integrationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DEC8043-4F39-41AA-8AF6-93E75EBAC64D}|KwetterIntegrationtestsTweets\\KwetterIntegrationtestsTweets.csproj|d:\\school\\s6\\code\\kwetter\\backend\\services\\kwetter\\kwetterintegrationteststweets\\setup\\integrationtestcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DEC8043-4F39-41AA-8AF6-93E75EBAC64D}|KwetterIntegrationtestsTweets\\KwetterIntegrationtestsTweets.csproj|solutionrelative:kwetterintegrationteststweets\\setup\\integrationtestcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DEC8043-4F39-41AA-8AF6-93E75EBAC64D}|KwetterIntegrationtestsTweets\\KwetterIntegrationtestsTweets.csproj|d:\\school\\s6\\code\\kwetter\\backend\\services\\kwetter\\kwetterintegrationteststweets\\setup\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DEC8043-4F39-41AA-8AF6-93E75EBAC64D}|KwetterIntegrationtestsTweets\\KwetterIntegrationtestsTweets.csproj|solutionrelative:kwetterintegrationteststweets\\setup\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DEC8043-4F39-41AA-8AF6-93E75EBAC64D}|KwetterIntegrationtestsTweets\\KwetterIntegrationtestsTweets.csproj|d:\\school\\s6\\code\\kwetter\\backend\\services\\kwetter\\kwetterintegrationteststweets\\setup\\webappfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DEC8043-4F39-41AA-8AF6-93E75EBAC64D}|KwetterIntegrationtestsTweets\\KwetterIntegrationtestsTweets.csproj|solutionrelative:kwetterintegrationteststweets\\setup\\webappfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,50 +34,81 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthenticationService.cs",
-              "DocumentMoniker": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Services\\AuthenticationService.cs",
-              "RelativeDocumentMoniker": "Users.api\\Services\\AuthenticationService.cs",
-              "ToolTip": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Services\\AuthenticationService.cs",
-              "RelativeToolTip": "Users.api\\Services\\AuthenticationService.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAQwCUAAAAsAAAA",
+              "Title": "DummyTest.cs",
+              "DocumentMoniker": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\KwetterIntegrationtestsTweets\\DummyTest.cs",
+              "RelativeDocumentMoniker": "KwetterIntegrationtestsTweets\\DummyTest.cs",
+              "ToolTip": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\KwetterIntegrationtestsTweets\\DummyTest.cs",
+              "RelativeToolTip": "KwetterIntegrationtestsTweets\\DummyTest.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAYwCsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T11:08:43.677Z",
+              "WhenOpened": "2024-06-17T09:03:46.058Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 1908,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthenticationControllerIntegrationTests.cs",
+              "DocumentMoniker": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\KwetterIntegrationtestsTweets\\AuthenticationControllerIntegrationTests.cs",
+              "RelativeDocumentMoniker": "KwetterIntegrationtestsTweets\\AuthenticationControllerIntegrationTests.cs",
+              "ToolTip": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\KwetterIntegrationtestsTweets\\AuthenticationControllerIntegrationTests.cs",
+              "RelativeToolTip": "KwetterIntegrationtestsTweets\\AuthenticationControllerIntegrationTests.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T08:59:45.047Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IntegrationTestCollection.cs",
+              "DocumentMoniker": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\KwetterIntegrationtestsTweets\\Setup\\IntegrationTestCollection.cs",
+              "RelativeDocumentMoniker": "KwetterIntegrationtestsTweets\\Setup\\IntegrationTestCollection.cs",
+              "ToolTip": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\KwetterIntegrationtestsTweets\\Setup\\IntegrationTestCollection.cs",
+              "RelativeToolTip": "KwetterIntegrationtestsTweets\\Setup\\IntegrationTestCollection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T08:58:31.599Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IntegrationTest.cs",
+              "DocumentMoniker": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\KwetterIntegrationtestsTweets\\Setup\\IntegrationTest.cs",
+              "RelativeDocumentMoniker": "KwetterIntegrationtestsTweets\\Setup\\IntegrationTest.cs",
+              "ToolTip": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\KwetterIntegrationtestsTweets\\Setup\\IntegrationTest.cs",
+              "RelativeToolTip": "KwetterIntegrationtestsTweets\\Setup\\IntegrationTest.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T08:58:28.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\KwetterIntegrationtestsTweets\\Setup\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "KwetterIntegrationtestsTweets\\Setup\\ServiceCollectionExtensions.cs",
+              "ToolTip": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\KwetterIntegrationtestsTweets\\Setup\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "KwetterIntegrationtestsTweets\\Setup\\ServiceCollectionExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T08:58:13.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WebAppFactory.cs",
+              "DocumentMoniker": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\KwetterIntegrationtestsTweets\\Setup\\WebAppFactory.cs",
+              "RelativeDocumentMoniker": "KwetterIntegrationtestsTweets\\Setup\\WebAppFactory.cs",
+              "ToolTip": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\KwetterIntegrationtestsTweets\\Setup\\WebAppFactory.cs",
+              "RelativeToolTip": "KwetterIntegrationtestsTweets\\Setup\\WebAppFactory.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAgwBwAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T08:54:51.045Z"
             }
           ]
         }

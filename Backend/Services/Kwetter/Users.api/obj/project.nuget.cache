@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VLmVjgYl+uIM9QMHy6VGZc4OvG3vpmenQqygyNhFiaTVGgcBEbSAHWpy0wwbo/zMFXcNLa77zqVd8zso9HfsCA==",
+  "dgSpecHash": "KoZkQvR1yG6eYtSJuptmid8dagKo467ZGaDS9CnlszdDQmQgDWUD2fS3uc0Bd1PDSdot3gdBhEaMwgSr0HIIbg==",
   "success": true,
-  "projectFilePath": "G:\\School\\S6\\Code\\Backend\\Services\\Kwetter\\Users.api\\Users.api.csproj",
+  "projectFilePath": "D:\\School\\S6\\Code\\Kwetter\\Backend\\Services\\Kwetter\\Users.api\\Users.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stock\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Stock\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

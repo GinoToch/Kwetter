@@ -11,20 +11,19 @@ services:
         com.microsoft.visual-studio.project-name: "Accounts.api"
     volumes:
       - C:\Users\Stock\vsdbg\vs2017u5:/remote_debugger:rw
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
-      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
-      - G:\Programs\Visual Studio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net6.0:/TokenService.Proxy:ro
-      - G:\Programs\Visual Studio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net8.0:/HotReloadProxy:ro
-      - G:\Programs\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
+      - C:\Users\Stock\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+      - C:\Users\Stock\AppData\Roaming\ASP.NET\Https:/home/app/.aspnet/https:ro
+      - C:\Users\Stock\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+      - C:\Users\Stock\AppData\Roaming\Microsoft\UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\linux-x64\net8.0:/VSTools:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
 
-    entrypoint: tail -f /dev/null
+    entrypoint: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --wait"
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages --additionalProbingPath /.nuget/fallbackpackages  \"/app/Accounts.api.dll\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages  \"/app/Accounts.api.dll\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
-      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+      com.microsoft.visualstudio.debuggee.killprogram: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --stop dotnet"
       com.microsoft.visual-studio.project-name: "Accounts.api"
     tty: true
   followersapi:
@@ -37,20 +36,19 @@ services:
         com.microsoft.visual-studio.project-name: "Followers.api"
     volumes:
       - C:\Users\Stock\vsdbg\vs2017u5:/remote_debugger:rw
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
-      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
-      - G:\Programs\Visual Studio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net6.0:/TokenService.Proxy:ro
-      - G:\Programs\Visual Studio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net8.0:/HotReloadProxy:ro
-      - G:\Programs\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
+      - C:\Users\Stock\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+      - C:\Users\Stock\AppData\Roaming\ASP.NET\Https:/home/app/.aspnet/https:ro
+      - C:\Users\Stock\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+      - C:\Users\Stock\AppData\Roaming\Microsoft\UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\linux-x64\net8.0:/VSTools:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
 
-    entrypoint: tail -f /dev/null
+    entrypoint: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --wait"
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages --additionalProbingPath /.nuget/fallbackpackages  \"/app/Followers.api.dll\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages  \"/app/Followers.api.dll\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
-      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+      com.microsoft.visualstudio.debuggee.killprogram: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --stop dotnet"
       com.microsoft.visual-studio.project-name: "Followers.api"
     tty: true
 
@@ -64,20 +62,19 @@ services:
         com.microsoft.visual-studio.project-name: "Gateway.api"
     volumes:
       - C:\Users\Stock\vsdbg\vs2017u5:/remote_debugger:rw
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
-      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
-      - G:\Programs\Visual Studio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net6.0:/TokenService.Proxy:ro
-      - G:\Programs\Visual Studio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net8.0:/HotReloadProxy:ro
-      - G:\Programs\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
+      - C:\Users\Stock\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+      - C:\Users\Stock\AppData\Roaming\ASP.NET\Https:/home/app/.aspnet/https:ro
+      - C:\Users\Stock\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+      - C:\Users\Stock\AppData\Roaming\Microsoft\UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\linux-x64\net8.0:/VSTools:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
 
-    entrypoint: tail -f /dev/null
+    entrypoint: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --wait"
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages --additionalProbingPath /.nuget/fallbackpackages  \"/app/Gateway.api.dll\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages  \"/app/Gateway.api.dll\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
-      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+      com.microsoft.visualstudio.debuggee.killprogram: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --stop dotnet"
       com.microsoft.visual-studio.project-name: "Gateway.api"
     tty: true
 
@@ -91,20 +88,19 @@ services:
         com.microsoft.visual-studio.project-name: "Notifications.api"
     volumes:
       - C:\Users\Stock\vsdbg\vs2017u5:/remote_debugger:rw
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
-      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
-      - G:\Programs\Visual Studio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net6.0:/TokenService.Proxy:ro
-      - G:\Programs\Visual Studio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net8.0:/HotReloadProxy:ro
-      - G:\Programs\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
+      - C:\Users\Stock\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+      - C:\Users\Stock\AppData\Roaming\ASP.NET\Https:/home/app/.aspnet/https:ro
+      - C:\Users\Stock\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+      - C:\Users\Stock\AppData\Roaming\Microsoft\UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\linux-x64\net8.0:/VSTools:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
 
-    entrypoint: tail -f /dev/null
+    entrypoint: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --wait"
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages --additionalProbingPath /.nuget/fallbackpackages  \"/app/Notifications.api.dll\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages  \"/app/Notifications.api.dll\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
-      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+      com.microsoft.visualstudio.debuggee.killprogram: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --stop dotnet"
       com.microsoft.visual-studio.project-name: "Notifications.api"
     tty: true
 
@@ -118,20 +114,19 @@ services:
         com.microsoft.visual-studio.project-name: "Tweets.api"
     volumes:
       - C:\Users\Stock\vsdbg\vs2017u5:/remote_debugger:rw
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
-      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
-      - G:\Programs\Visual Studio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net6.0:/TokenService.Proxy:ro
-      - G:\Programs\Visual Studio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net8.0:/HotReloadProxy:ro
-      - G:\Programs\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
+      - C:\Users\Stock\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+      - C:\Users\Stock\AppData\Roaming\ASP.NET\Https:/home/app/.aspnet/https:ro
+      - C:\Users\Stock\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+      - C:\Users\Stock\AppData\Roaming\Microsoft\UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\linux-x64\net8.0:/VSTools:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
 
-    entrypoint: tail -f /dev/null
+    entrypoint: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --wait"
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages --additionalProbingPath /.nuget/fallbackpackages  \"/app/Tweets.api.dll\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages  \"/app/Tweets.api.dll\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
-      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+      com.microsoft.visualstudio.debuggee.killprogram: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --stop dotnet"
       com.microsoft.visual-studio.project-name: "Tweets.api"
     tty: true
 
@@ -145,19 +140,18 @@ services:
         com.microsoft.visual-studio.project-name: "Users.api"
     volumes:
       - C:\Users\Stock\vsdbg\vs2017u5:/remote_debugger:rw
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
-      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
-      - G:\Programs\Visual Studio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\TokenService.Proxy\linux-x64\net6.0:/TokenService.Proxy:ro
-      - G:\Programs\Visual Studio\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\HotReloadProxy\linux-x64\net8.0:/HotReloadProxy:ro
-      - G:\Programs\Visual Studio\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
+      - C:\Users\Stock\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+      - C:\Users\Stock\AppData\Roaming\ASP.NET\Https:/home/app/.aspnet/https:ro
+      - C:\Users\Stock\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+      - C:\Users\Stock\AppData\Roaming\Microsoft\UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\linux-x64\net8.0:/VSTools:ro
+      - C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\HotReload:/HotReloadAgent:ro
 
-    entrypoint: tail -f /dev/null
+    entrypoint: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --wait"
     labels:
       com.microsoft.visualstudio.debuggee.program: "dotnet"
-      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages --additionalProbingPath /.nuget/fallbackpackages  \"/app/Users.api.dll\""
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /.nuget/packages  \"/app/Users.api.dll\""
       com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
-      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+      com.microsoft.visualstudio.debuggee.killprogram: "dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --stop dotnet"
       com.microsoft.visual-studio.project-name: "Users.api"
     tty: true
