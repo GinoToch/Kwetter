@@ -1,40 +1,35 @@
-name: Run integration tests
+name: Integration Tests
 
 on:
   push:
     branches:
-      - main
+      - main  # Adjust branch name as needed
   pull_request:
     branches:
-      - main
+      - main  # Adjust branch name as needed
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: '8.0.x'  # Specify .NET 8
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '8.x'  # Adjust to '6.x' if using .NET 6
 
-    - name: Restore dependencies
-      run: |
-        cd Backend/Services/Kwetter  # Navigate to the directory containing Kwetter.sln
-        dotnet restore Kwetter.sln
-      # Adjust the path to your solution file (Kwetter.sln) and navigate to its directory
+      - name: Restore dependencies
+        run: dotnet restore
 
-    - name: Build solution
-      run: |
-        cd Backend/Services/Kwetter  # Navigate to the directory containing Kwetter.sln
-        dotnet build Kwetter.sln --no-restore
-      # Adjust the path to your solution file (Kwetter.sln) and navigate to its directory
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
 
-    - name: Run integration tests
-      run: |
-        cd Backend/Services/Kwetter  # Navigate to the directory containing Kwetter.sln
-        dotnet test Backend/Services/Kwetter/KwetterIntegrationTestsUsers --no-build --logger trx
-      # Adjust the path to your test project directory and navigate to its directory
+      - name: Change directory to Backend/Services/Kwetter
+        run: cd Backend/Services/Kwetter
+
+      - name: Run integration tests
+        run: |
+          dotnet test --no-build --configuration Release --verbosity normal
