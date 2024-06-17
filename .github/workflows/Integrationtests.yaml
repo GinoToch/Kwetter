@@ -31,9 +31,6 @@ jobs:
           cd Backend/Services/Kwetter
           dotnet build Kwetter.sln
 
-      - name: Change directory to integration tests
-        run: cd Backend/Services/Kwetter/KwetterIntegrationTestsUsers
-
       - name: Run integration tests
-        run: |
-          dotnet test KwetterIntegrationTestsUsers.csproj
+        run: dotnet test Backend/Services/Kwetter/KwetterIntegrationTestsUsers/KwetterIntegrationTestsUsers.csproj
+
