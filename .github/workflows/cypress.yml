@@ -37,16 +37,6 @@ jobs:
           echo "Server started in the background"
         working-directory: ./Frontend
 
-      # - name: Wait for server to be ready
-      #   run: |
-      #     echo "Waiting for server to be ready..."
-      #     npx wait-on http://0.0.0.0::4173
-      #   working-directory: ./MyMovieListFrontend
-        
-      # - name: Display server log (debugging)
-      #   if: failure()
-      #   run: cat server-log.txt
-      #   working-directory: ./MyMovieListFrontend
 
       - name: Run Cypress tests
         run: |
