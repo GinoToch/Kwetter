@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Paper, Text, Divider, Anchor, Group, Button, TextInput, PasswordInput, Stack, Center, Space } from '@mantine/core';
-import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { BASE_URL } from "../constants";
 import { useDisclosure } from '@mantine/hooks';
 import { Modal } from '@mantine/core';
 import { showNotification } from '@mantine/notifications';
 import { IconCheck, IconX } from "@tabler/icons-react";
+import Intercept from "../Intercept";
 
 export function Homepage(props: any) {
   const [isLogin, setIsLogin] = useState(true);
@@ -19,7 +19,7 @@ export function Homepage(props: any) {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
+      const response = await Intercept.post(
         `${BASE_URL}/users-api/Authentication/login`,
         {
           userName: username,
@@ -51,7 +51,7 @@ export function Homepage(props: any) {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
+      const response = await Intercept.post(
         `${BASE_URL}/users-api/Authentication/register`,
         {
           userName: username,
@@ -104,6 +104,7 @@ export function Homepage(props: any) {
                 label="Username"
                 placeholder="Your username"
                 value={username}
+                id="username-input"
                 onChange={(event) => setUsername(event.currentTarget.value)}
                 radius="md"
               />
@@ -113,6 +114,7 @@ export function Homepage(props: any) {
                 label="Password"
                 placeholder="Your password"
                 value={password}
+                id="password-input"
                 onChange={(event) => setPassword(event.currentTarget.value)}
                 radius="md"
               />
@@ -122,7 +124,7 @@ export function Homepage(props: any) {
               <Anchor component="button" type="button" c="dimmed" onClick={() => setIsLogin(!isLogin)}>
                 {isLogin ? "Want to register?" : "Already have an account? Login"}
               </Anchor>
-              <Button type="submit" radius="md">
+              <Button id="login-button" type="submit" radius="md">
                 {isLogin ? "Login" : "Register"}
               </Button>
             </Group>

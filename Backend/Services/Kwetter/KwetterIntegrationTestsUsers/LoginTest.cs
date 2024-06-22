@@ -52,7 +52,7 @@ public class LoginTest : IntegrationTest
                 Password = "SomePassword123"
             };
 
-            // Act: Attempt to login with non-existent user
+            // Act: Attempt to log in with non-existent user
             var loginResponse = await HttpClient.PostAsJsonAsync("/Authentication/login", loginDto);
 
             // Assert: Check for Unauthorized response

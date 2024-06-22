@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import AppLayout from "../components/AppLayout";
 import {jwtDecode} from "jwt-decode";
 import {
@@ -18,6 +17,7 @@ import { IconCheck, IconHeart, IconMessage, IconX } from "@tabler/icons-react";
 import { BASE_URL } from "../constants";
 import { Link } from "react-router-dom";
 import { showNotification } from '@mantine/notifications';
+import Intercept from "../Intercept";
 
 const Feedpage: React.FC<{}> = () => {
   const [tweets, setTweets] = useState<any[]>([]);
@@ -34,7 +34,7 @@ const Feedpage: React.FC<{}> = () => {
     }
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${BASE_URL}/tweets-api/feed`);
+        const response = await Intercept.get(`${BASE_URL}/tweets-api/feed`);
         setTweets(response.data);
         console.log(username);
         console.log(response.data);
@@ -68,7 +68,7 @@ const Feedpage: React.FC<{}> = () => {
 
     try {
       const token = sessionStorage.getItem("access-token");
-      await axios.post(
+      await Intercept.post(
         `${BASE_URL}/tweets-api/tweet/CreateTweet`,
         {
           UserId: userId,

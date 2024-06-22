@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../constants";
-import axios from "axios";
 import {
   Card,
   Avatar,
@@ -18,6 +17,7 @@ import AppLayout from "../components/AppLayout";
 import { jwtDecode } from "jwt-decode";
 import { IconArrowBack, IconCheck, IconPencil } from "@tabler/icons-react";
 import { useDisclosure } from "@mantine/hooks";
+import Intercept from "../Intercept";
 
 export function Account() {
   const { userName } = useParams<{ userName: string }>();
@@ -45,7 +45,7 @@ export function Account() {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get(
+        const response = await Intercept.get(
           `${BASE_URL}/account-api/account/GetAccount?name=${userName}`,
           {
             headers: {
@@ -84,7 +84,7 @@ export function Account() {
     const userId = decodedToken.sub;
 
     try {
-       await axios.delete(
+       await Intercept.delete(
         `${BASE_URL}/account-api/account/DeleteAccount?id=${userId}`,
         {
           headers: {
